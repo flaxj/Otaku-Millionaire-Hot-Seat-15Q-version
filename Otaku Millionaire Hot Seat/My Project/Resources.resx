@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AskAFriend" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\AskAFriend.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AskLifelineResults" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\AskLifelineResults.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AskLifelineSurvay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\AskLifelineSurvay.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ask_a_Friend_lifeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ask a Friend lifeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ask_lifeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ask lifeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_Royle_Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Battle Royle Intro.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="contestentIntro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\contestentIntro.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DoubleDipandFinalIntro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\DoubleDipandFinalIntro.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DoubleDipFinalAnswer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\DoubleDipFinalAnswer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DoubleDipLifelineFirstGuess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\DoubleDipLifelineFirstGuess.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DoubleDipRules" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\DoubleDipRules.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DoubleDipSecondChance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\DoubleDipSecondChance.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Double_Dip_Lifeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Double Dip Lifeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="End_of_Game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\End of Game.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FiftyFiftySound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\FiftyFiftySound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="JackpotQuestionMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\JackpotQuestionMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Level1Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Level1Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Level1QuestionMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Level1QuestionMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Level1Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Level1Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LevelTransitionMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\LevelTransitionMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MillionYenWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\MillionYenWrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MilllionYenWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\MilllionYenWin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Next_Player_In" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Next Player In.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OneThousandYenWon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\OneThousandYenWon.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OpeningTheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\OpeningTheme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Otaku_Millionaire_Hot_Seat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Otaku Millionaire Hot Seat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pass_lifeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pass lifeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Question10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question10.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question10Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question10Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question10Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question10Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question10Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question10Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question10_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question10.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question10_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question10.30.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question11Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question11Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question12MillionYenFinalAnswer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question12MillionYenFinalAnswer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question12MillionYenQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question12MillionYenQuestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question12MillionYenQuestion_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question12MillionYenQuestion.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question12MillionYenQuestion_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question12MillionYenQuestion.30.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question3Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question3Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question3Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question3Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question3Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question3Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question3_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question3.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question4Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question4Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question4Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question4Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question4Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question4Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question4_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question4.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question5Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question5Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question5Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question5Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question5Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question5Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question5_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question5.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question6Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question6Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question6Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question6Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question6Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question6Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question6_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question6.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question7.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question7Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question7Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question7Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question7Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question7Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question7Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question7_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question7.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question8.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question8Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question8Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question8Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question8Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question8Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question8Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question8_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question8.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question8_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question8.30.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question9.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question9Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question9Correct.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question9Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question9Final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question9Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question9Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question9_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question9.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Question9_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Question9.30.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Questions11and12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Questions11and12.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Questions11and12FinalAnswer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Questions11and12FinalAnswer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Questions11and12Wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Questions11and12Wrong.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Questions11and12_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Questions11and12.15.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Questions11and12_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Questions11and12.30.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="QuestionTransitionMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\QuestionTransitionMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RegularWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\RegularWin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Rules_Explanation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Rules Explanation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StartGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\StartGame.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Three_Beeps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Otaku Millionaire Hot Seat 12 Question Format\Three Beeps.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Trust_the_Computer_lifeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trust the Computer lifeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5050_lifeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\OneDrive\Pictures\Otaku Millionare Hot Seat\5050 lifeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

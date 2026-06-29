@@ -46,10 +46,10 @@ Partial Class Q12
         Me.ChoiceD = New System.Windows.Forms.CheckBox()
         Me.AskFriendPic = New System.Windows.Forms.PictureBox()
         Me.AskPic = New System.Windows.Forms.PictureBox()
-        Me.FiftyFiftyPic = New System.Windows.Forms.PictureBox()
+        Me.DoubleDipPic = New System.Windows.Forms.PictureBox()
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FiftyFiftyPic, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PlayersRemaining
@@ -284,21 +284,22 @@ Partial Class Q12
         Me.AskPic.TabIndex = 78
         Me.AskPic.TabStop = False
         '
-        'FiftyFiftyPic
+        'DoubleDipPic
         '
-        Me.FiftyFiftyPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources._5050_lifeline
-        Me.FiftyFiftyPic.Location = New System.Drawing.Point(1100, 42)
-        Me.FiftyFiftyPic.Name = "FiftyFiftyPic"
-        Me.FiftyFiftyPic.Size = New System.Drawing.Size(100, 50)
-        Me.FiftyFiftyPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.FiftyFiftyPic.TabIndex = 79
-        Me.FiftyFiftyPic.TabStop = False
+        Me.DoubleDipPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources.Double_Dip_Lifeline
+        Me.DoubleDipPic.Location = New System.Drawing.Point(1097, 42)
+        Me.DoubleDipPic.Name = "DoubleDipPic"
+        Me.DoubleDipPic.Size = New System.Drawing.Size(100, 50)
+        Me.DoubleDipPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.DoubleDipPic.TabIndex = 257
+        Me.DoubleDipPic.TabStop = False
         '
         'Q12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.DoubleDipPic)
         Me.Controls.Add(Me.PlayersRemaining)
         Me.Controls.Add(Me.Topic)
         Me.Controls.Add(Me.MasterButton)
@@ -320,7 +321,6 @@ Partial Class Q12
         Me.Controls.Add(Me.ChoiceD)
         Me.Controls.Add(Me.AskFriendPic)
         Me.Controls.Add(Me.AskPic)
-        Me.Controls.Add(Me.FiftyFiftyPic)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1280, 720)
@@ -328,7 +328,7 @@ Partial Class Q12
         Me.Text = "Question 12"
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FiftyFiftyPic, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -358,4 +358,5 @@ Partial Class Q12
     Friend WithEvents Question1 As Label
     Friend WithEvents TenthsClock As Timer
     Friend WithEvents ChoiceD As CheckBox
+    Friend WithEvents DoubleDipPic As PictureBox
 End Class

@@ -273,9 +273,11 @@
                         My.Computer.Audio.Play(My.Resources.Question11Correct, AudioPlayMode.Background)
                     End If
 
-                    'hide the Double Dip Lifeline Picture
-                    DoubleDipPic.Visible = False
-                    PlayerScreen.DoubleDipPic.Visible = False
+                    If DoubleDipCount = 1 Then
+                        'hide the Double Dip Lifeline Picture
+                        DoubleDipPic.Visible = False
+                        PlayerScreen.DoubleDipPic.Visible = False
+                    End If
 
                     If AskFriendCount = 0 Then
                         'show the Ask Friend Lifeline
@@ -829,15 +831,9 @@
                         PlayerScreen.AskFriendPic.Visible = True
                     End If
 
-                    If Trust = 1 Then
-                        'hide the Trust the Computer Picture
-                        TrustPic.Visible = False
-                        PlayerScreen.TrustPic.Visible = False
-                    Else
-                        'show the Trust the computer Picture
-                        TrustPic.Visible = True
-                        PlayerScreen.TrustPic.Visible = True
-                    End If
+                    'hide the Trust the Computer Picture
+                    TrustPic.Visible = False
+                    PlayerScreen.TrustPic.Visible = False
 
                     'enable the MasterButton and Disable the Double Dip
                     MasterButton.Enabled = True

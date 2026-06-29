@@ -63,7 +63,6 @@ Partial Class PlayerScreen
         Me.Topic03 = New System.Windows.Forms.Label()
         Me.Topic02 = New System.Windows.Forms.Label()
         Me.Topic01 = New System.Windows.Forms.Label()
-        Me.FiftyFiftyPic = New System.Windows.Forms.PictureBox()
         Me.PassPic = New System.Windows.Forms.PictureBox()
         Me.DoubleDipPic = New System.Windows.Forms.PictureBox()
         Me.AskPic = New System.Windows.Forms.PictureBox()
@@ -83,7 +82,6 @@ Partial Class PlayerScreen
         CType(Me.EndShowLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrustPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FiftyFiftyPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PassPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -541,17 +539,6 @@ Partial Class PlayerScreen
         Me.Topic01.Text = "Label1"
         Me.Topic01.Visible = False
         '
-        'FiftyFiftyPic
-        '
-        Me.FiftyFiftyPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources._5050_lifeline
-        Me.FiftyFiftyPic.Location = New System.Drawing.Point(1152, 41)
-        Me.FiftyFiftyPic.Name = "FiftyFiftyPic"
-        Me.FiftyFiftyPic.Size = New System.Drawing.Size(100, 50)
-        Me.FiftyFiftyPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.FiftyFiftyPic.TabIndex = 277
-        Me.FiftyFiftyPic.TabStop = False
-        Me.FiftyFiftyPic.Visible = False
-        '
         'PassPic
         '
         Me.PassPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources.pass_lifeline
@@ -771,7 +758,6 @@ Partial Class PlayerScreen
         Me.Controls.Add(Me.Topic03)
         Me.Controls.Add(Me.Topic02)
         Me.Controls.Add(Me.Topic01)
-        Me.Controls.Add(Me.FiftyFiftyPic)
         Me.Controls.Add(Me.DoubleDipPic)
         Me.Controls.Add(Me.ChoiceD)
         Me.Controls.Add(Me.ChoiceC)
@@ -801,7 +787,6 @@ Partial Class PlayerScreen
         CType(Me.EndShowLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrustPic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FiftyFiftyPic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PassPic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).EndInit()
@@ -852,7 +837,6 @@ Partial Class PlayerScreen
     Friend WithEvents Topic03 As Label
     Friend WithEvents Topic02 As Label
     Friend WithEvents Topic01 As Label
-    Friend WithEvents FiftyFiftyPic As PictureBox
     Friend WithEvents PassPic As PictureBox
     Friend WithEvents DoubleDipPic As PictureBox
     Friend WithEvents AskPic As PictureBox

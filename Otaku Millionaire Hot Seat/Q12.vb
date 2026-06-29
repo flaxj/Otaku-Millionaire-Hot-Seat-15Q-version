@@ -5,6 +5,7 @@
     Friend questionsRemaining As Integer = 1 'declare questionsRemaining as Integer
     Friend AskFriendCount As Integer 'declare AskFriendCount as Integer
     Friend AskAudienceCount As Integer 'declare AskAudienceCount as Integer
+    Friend DoubleDipCount As Integer 'declare DoubleDipCount as Integer
     Friend AskA As Integer 'declare AskA as Integer
     Friend AskB As Integer 'declare AskB as Integer
     Friend AskC As Integer 'declare AskC as Integer
@@ -23,7 +24,7 @@
     Dim guess As Integer 'declare guess as Integer
     Friend ask As Integer 'declare ask as Integer
     Friend AskSum As Integer    'decare AskSum as Integer
-    Dim FiftyFiftyCount As Integer = 0 'declare FiftyFiftyCount as Integer
+    Dim DDEnable As Integer = 0 'declare DDEnable as Integer
 
     Private Sub Q12_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'transfer Friend Varables from Question 11 and Level 4
@@ -31,6 +32,7 @@
         GPlayerNumber = Q11.GPlayerNumber
         AskFriendCount = Level4MoneyTree.AskFriendCount
         AskAudienceCount = Level4MoneyTree.AskAudienceCount
+        DoubleDipCount = Level4MoneyTree.DoubleDipCount
         TopPrizeAmount.Text = Q11.TopPrizeAmount.Text
         Seconds.Text = CStr(TimeSeconds)
         Tenths.Text = CStr(TimeTenths)
@@ -53,7 +55,13 @@
         PlayerScreen.Tenths.Text = CStr(0)
         QuestionLoading()
 
-        If GPlayersRemaining = 6 Then
+        If GPlayerNumber = 6 And Level4MoneyTree.Money12.Text = "¥2,000,000" Then
+            'set new risk value to ¥1,999,000
+            AmountAtRisk.Text = "¥1,999,000"
+
+            'set top prize to ¥2,000,000
+            TopPrizeAmount.Text = "¥2,000,000"
+        ElseIf GPlayersRemaining = 6 Or Level4MoneyTree.Money12.Visible = True Then
             'set new risk value to ¥999,000
             AmountAtRisk.Text = "¥999,000"
 
@@ -108,17 +116,23 @@
 
     Sub LifelineUsed()
         'check to see if Ask a Friend is used
-        If AskFriendCount = 1 Then
+        If AskFriendCount = 1 Or Level4MoneyTree.AskFriendPic.Visible = False Then
             'hide and disable the Ask a Friend Lifeline
             AskFriendPic.Visible = False
             PlayerScreen.AskFriendPic.Visible = False
         End If
 
         'check to see if Ask the Audience is used
-        If AskAudienceCount = 1 Then
-            'hide and disable the Ask a Friend Lifeline
+        If AskAudienceCount = 1 Or Level4MoneyTree.AskPic.Visible = False Then
+            'hide and disable the Ask the Audience Lifeline
             AskPic.Visible = False
             PlayerScreen.AskPic.Visible = False
+        End If
+
+        If DoubleDipCount = 1 Or Level4MoneyTree.DoubleDipPic.Visible = False Then
+            'hide and disable the Double Dip Lifeline
+            DoubleDipPic.Visible = False
+            PlayerScreen.DoubleDipPic.Visible = False
         End If
     End Sub
 
@@ -496,18 +510,7 @@
         End If
     End Sub
 
-    Private Sub FiftyFiftyPic_Click(sender As Object, e As EventArgs) Handles FiftyFiftyPic.Click
-        'disable all other lifelines
-        AskFriendPic.Visible = False
-        AskPic.Visible = False
-        PlayerScreen.AskFriendPic.Visible = False
-        PlayerScreen.AskPic.Visible = False
-
-        'perform Fifty Fifty
-        FiftyFifty()
-    End Sub
-
-    Sub FiftyFifty()
+    Private Sub DoubleDipPic_Click(sender As Object, e As EventArgs) Handles DoubleDipPic.Click
         Select Case guess
             Case 0
                 'stop the clock
@@ -546,140 +549,106 @@
                 Placeholder.ForeColor = DefaultForeColor
                 Tenths.BackColor = DefaultBackColor
                 Tenths.ForeColor = DefaultForeColor
+                PlayerScreen.Seconds.BackColor = DefaultBackColor
+                PlayerScreen.Seconds.ForeColor = DefaultForeColor
+                PlayerScreen.Placeholder.BackColor = DefaultBackColor
+                PlayerScreen.Placeholder.ForeColor = DefaultForeColor
+                PlayerScreen.Tenths.BackColor = DefaultBackColor
+                PlayerScreen.Tenths.ForeColor = DefaultForeColor
 
-                'stop the clock music
+                'hide the other lifelines
+                AskFriendPic.Visible = False
+                AskPic.Visible = False
+                PlayerScreen.AskFriendPic.Visible = False
+                PlayerScreen.PassPic.Visible = False
+
+                'Set DDEnable to one
+                DDEnable = 1
+
+                'stop the clock music and play Double Dip Music
                 My.Computer.Audio.Stop()
+                My.Computer.Audio.Play(My.Resources.DoubleDipLifelineFirstGuess, AudioPlayMode.Background)
             Case 1
-                'Find the Correct Answer
-                If ChoiceA.Text = answer Then
-                    FiftyFiftyWrong(0) = ChoiceB.Text
-                    FiftyFiftyWrong(1) = ChoiceC.Text
-                    FiftyFiftyWrong(2) = ChoiceD.Text
-                ElseIf ChoiceB.Text = answer Then
-                    FiftyFiftyWrong(0) = ChoiceA.Text
-                    FiftyFiftyWrong(1) = ChoiceC.Text
-                    FiftyFiftyWrong(2) = ChoiceD.Text
-                ElseIf ChoiceC.Text = answer Then
-                    FiftyFiftyWrong(0) = ChoiceA.Text
-                    FiftyFiftyWrong(1) = ChoiceB.Text
-                    FiftyFiftyWrong(2) = ChoiceD.Text
+                If Correct.Visible = True Then
+                    'perform questionResult
+                    QuestionResult()
+
+                    'stop the audio
+                    My.Computer.Audio.Stop()
+
+                    'take away one from question remaining
+                    questionsRemaining = questionsRemaining - 1
+                    TopPrizeQuestionRemaining.Text = CStr(questionsRemaining)
+
+                    If GPlayersRemaining = 2 Then
+                        'play Question 7 Correct Answer
+                        My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
+                    Else
+                        'play Question 11 Correct Answer
+                        My.Computer.Audio.Play(My.Resources.Question11Correct, AudioPlayMode.Background)
+                    End If
+
+                    If AskAudienceCount = 0 Then
+                        'show the Ask Friend Picture
+                        AskPic.Visible = True
+                        PlayerScreen.AskPic.Visible = True
+                    End If
+
+                    If AskFriendCount = 0 Then
+                        'show the Ask Friend Picture
+                        AskFriendPic.Visible = True
+                        PlayerScreen.AskFriendPic.Visible = True
+                    End If
+
+                    'enable the MasterButton and Disable the Double Dip
+                    MasterButton.Enabled = True
+                    DoubleDipPic.Visible = False
+                    PlayerScreen.DoubleDipPic.Visible = False
+
+                    'set button count to 3
+                    ButtonCount = 3
                 Else
-                    FiftyFiftyWrong(0) = ChoiceA.Text
-                    FiftyFiftyWrong(1) = ChoiceB.Text
-                    FiftyFiftyWrong(2) = ChoiceC.Text
+                    Select Case choice
+                        Case ChoiceA.Text
+                            'hide choice A
+                            ChoiceA.Visible = False
+                            PlayerScreen.ChoiceA.Visible = False
+                        Case ChoiceB.Text
+                            'hide choice B
+                            ChoiceB.Visible = False
+                            PlayerScreen.ChoiceB.Visible = False
+                        Case ChoiceC.Text
+                            'hide choice C
+                            ChoiceC.Visible = False
+                            PlayerScreen.ChoiceC.Visible = False
+                        Case ChoiceD.Text
+                            'hide choice D
+                            ChoiceD.Visible = False
+                            PlayerScreen.ChoiceD.Visible = False
+                    End Select
+
+                    'reset the choice selection
+                    choice = ""
+
+                    'play the Double Dip Second Change
+                    My.Computer.Audio.Play(My.Resources.DoubleDipSecondChance, AudioPlayMode.Background)
                 End If
 
-                'narrow the answer down by random selection keeping the correct answer up there
-                RemoveIncorrectAnswers()
-
-                'play 50:50 sound
-                My.Computer.Audio.Play(My.Resources.FiftyFiftySound, AudioPlayMode.Background)
-
                 'add one to Double Dip Count
-                FiftyFiftyCount += 1
+                DoubleDipCount += 1
             Case 2
                 'restart the clock
                 RestartQuestionClock()
 
-                'disable DoubleDipFiftyFifty Button
-                FiftyFiftyPic.Visible = False
-                PlayerScreen.FiftyFiftyPic.Visible = False
+                'hide the incorrect lable
+                Incorrect.Visible = False
 
-                'enable the ask lifelines
-                If AskFriendCount = 0 Then
-                    AskFriendPic.Visible = True
-                    PlayerScreen.AskFriendPic.Visible = True
-                End If
-
-                If AskAudienceCount = 0 Then
-                    AskPic.Visible = True
-                    PlayerScreen.AskPic.Visible = True
-                End If
+                'exit sub
+                Exit Sub
         End Select
 
-        If guess = 2 Then
-            'reset guess to zero
-            guess = 0
-        Else
-            'add one to guess
-            guess += 1
-        End If
-    End Sub
-
-    Sub RemoveIncorrectAnswers()
-        'declare selection, min, and max as Integer
-        Dim selection As Integer
-        Dim min As Integer = 0
-        Dim max As Integer = 2
-
-        'declare and perform the random choices
-        Dim randomNum As New Random
-
-        'set selection to a random number
-        selection = randomNum.Next(min, max)
-
-        'see what is the selection number
-        If selection = 0 Then
-            If answer = ChoiceA.Text Or answer = ChoiceB.Text Then
-                'hide Choice C and D
-                ChoiceC.Visible = False
-                ChoiceD.Visible = False
-                PlayerScreen.ChoiceC.Visible = False
-                PlayerScreen.ChoiceD.Visible = False
-            ElseIf answer = ChoiceC.Text Then
-                'hide Choice B and D
-                ChoiceB.Visible = False
-                ChoiceD.Visible = False
-                PlayerScreen.ChoiceB.Visible = False
-                PlayerScreen.ChoiceD.Visible = False
-            Else
-                'hide Choice B and C
-                ChoiceB.Visible = False
-                ChoiceC.Visible = False
-                PlayerScreen.ChoiceB.Visible = False
-                PlayerScreen.ChoiceC.Visible = False
-            End If
-        ElseIf selection = 1 Then
-            If answer = ChoiceA.Text Then
-                'hide Choice B and D
-                ChoiceB.Visible = False
-                ChoiceD.Visible = False
-                PlayerScreen.ChoiceB.Visible = False
-                PlayerScreen.ChoiceD.Visible = False
-            ElseIf answer = ChoiceB.Text Or answer = ChoiceC.Text Then
-                'hide Choice A and D
-                ChoiceA.Visible = False
-                ChoiceD.Visible = False
-                PlayerScreen.ChoiceA.Visible = False
-                PlayerScreen.ChoiceD.Visible = False
-            Else
-                'hide Choice A and C
-                ChoiceA.Visible = False
-                ChoiceC.Visible = False
-                PlayerScreen.ChoiceA.Visible = False
-                PlayerScreen.ChoiceA.Visible = False
-            End If
-        Else
-            If answer = ChoiceA.Text Then
-                'hide Choice B and C
-                ChoiceB.Visible = False
-                ChoiceC.Visible = False
-                PlayerScreen.ChoiceB.Visible = False
-                PlayerScreen.ChoiceC.Visible = False
-            ElseIf answer = ChoiceB.Text Then
-                'hide Choice A and C
-                ChoiceA.Visible = False
-                ChoiceC.Visible = False
-                PlayerScreen.ChoiceA.Visible = False
-                PlayerScreen.ChoiceC.Visible = False
-            Else
-                'hide Choice A and B
-                ChoiceA.Visible = False
-                ChoiceB.Visible = False
-                PlayerScreen.ChoiceA.Visible = False
-                PlayerScreen.ChoiceB.Visible = False
-            End If
-        End If
+        'add one to guess
+        guess += 1
     End Sub
 
     Sub RestartQuestionClock()
@@ -724,8 +693,8 @@
                 'hide the other lifelines
                 AskPic.Visible = False
                 PlayerScreen.AskPic.Visible = False
-                FiftyFiftyPic.Visible = False
-                PlayerScreen.FiftyFiftyPic.Visible = False
+                DoubleDipPic.Visible = False
+                PlayerScreen.DoubleDipPic.Visible = False
 
                 'check the clock for second time
                 If TimeSeconds >= 30 Then

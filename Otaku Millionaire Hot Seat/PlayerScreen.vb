@@ -256,7 +256,6 @@
         DoubleDipPic.Visible = False
         TrustPic.Visible = False
         PassPic.Visible = False
-        FiftyFiftyPic.Visible = False
 
         'show prize label
         Prize.Visible = True

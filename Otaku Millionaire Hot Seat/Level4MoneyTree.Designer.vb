@@ -48,7 +48,6 @@ Partial Class Level4MoneyTree
         Me.Money01 = New System.Windows.Forms.Label()
         Me.AskFriendPic = New System.Windows.Forms.PictureBox()
         Me.AskPic = New System.Windows.Forms.PictureBox()
-        Me.FiftyFiftyPic = New System.Windows.Forms.PictureBox()
         Me.Level4Rules = New System.Windows.Forms.Label()
         Me.Level4Label = New System.Windows.Forms.Label()
         Me.ResumeGame = New System.Windows.Forms.Button()
@@ -57,10 +56,12 @@ Partial Class Level4MoneyTree
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnSecondChance = New System.Windows.Forms.Button()
+        Me.DoubleDipPic = New System.Windows.Forms.PictureBox()
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FiftyFiftyPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Topic12
@@ -335,17 +336,6 @@ Partial Class Level4MoneyTree
         Me.AskPic.TabIndex = 75
         Me.AskPic.TabStop = False
         '
-        'FiftyFiftyPic
-        '
-        Me.FiftyFiftyPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources._5050_lifeline
-        Me.FiftyFiftyPic.Location = New System.Drawing.Point(1035, 44)
-        Me.FiftyFiftyPic.Name = "FiftyFiftyPic"
-        Me.FiftyFiftyPic.Size = New System.Drawing.Size(100, 50)
-        Me.FiftyFiftyPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.FiftyFiftyPic.TabIndex = 76
-        Me.FiftyFiftyPic.TabStop = False
-        Me.FiftyFiftyPic.Visible = False
-        '
         'Level4Rules
         '
         Me.Level4Rules.AutoSize = True
@@ -419,11 +409,32 @@ Partial Class Level4MoneyTree
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
+        'btnSecondChance
+        '
+        Me.btnSecondChance.Location = New System.Drawing.Point(128, 524)
+        Me.btnSecondChance.Name = "btnSecondChance"
+        Me.btnSecondChance.Size = New System.Drawing.Size(520, 86)
+        Me.btnSecondChance.TabIndex = 89
+        Me.btnSecondChance.Text = "Second Chance"
+        Me.btnSecondChance.UseVisualStyleBackColor = True
+        '
+        'DoubleDipPic
+        '
+        Me.DoubleDipPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources.Double_Dip_Lifeline
+        Me.DoubleDipPic.Location = New System.Drawing.Point(1033, 44)
+        Me.DoubleDipPic.Name = "DoubleDipPic"
+        Me.DoubleDipPic.Size = New System.Drawing.Size(100, 50)
+        Me.DoubleDipPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.DoubleDipPic.TabIndex = 258
+        Me.DoubleDipPic.TabStop = False
+        '
         'Level4MoneyTree
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.DoubleDipPic)
+        Me.Controls.Add(Me.btnSecondChance)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Level4Rules)
         Me.Controls.Add(Me.Level4Label)
@@ -432,7 +443,6 @@ Partial Class Level4MoneyTree
         Me.Controls.Add(Me.ShowMoneyTree)
         Me.Controls.Add(Me.AskFriendPic)
         Me.Controls.Add(Me.AskPic)
-        Me.Controls.Add(Me.FiftyFiftyPic)
         Me.Controls.Add(Me.Money12)
         Me.Controls.Add(Me.Money11)
         Me.Controls.Add(Me.Money10)
@@ -464,9 +474,9 @@ Partial Class Level4MoneyTree
         Me.Text = "Level 4 Money Tree"
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FiftyFiftyPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -498,7 +508,6 @@ Partial Class Level4MoneyTree
     Friend WithEvents Money01 As Label
     Friend WithEvents AskFriendPic As PictureBox
     Friend WithEvents AskPic As PictureBox
-    Friend WithEvents FiftyFiftyPic As PictureBox
     Friend WithEvents Level4Rules As Label
     Friend WithEvents Level4Label As Label
     Friend WithEvents ResumeGame As Button
@@ -507,4 +516,6 @@ Partial Class Level4MoneyTree
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnSecondChance As Button
+    Friend WithEvents DoubleDipPic As PictureBox
 End Class

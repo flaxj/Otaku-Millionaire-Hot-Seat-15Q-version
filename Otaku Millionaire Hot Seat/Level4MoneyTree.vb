@@ -4,6 +4,7 @@
     Friend GPlayersRemaining As Integer 'declare playersRemaining as Integer
     Friend AskFriendCount As Integer 'declare AskFriendCount as Integer
     Friend AskAudienceCount As Integer 'declare AskAudienceCount as Integer
+    Friend DoubleDipCount As Integer 'declare DoubleDipCount as Integer
     Dim count As Integer 'set count as Integer
 
     Private Sub Level4MoneyTree_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,6 +12,7 @@
         GPlayersRemaining = Q11.GPlayersRemaining
         AskFriendCount = Q11.AskFriendCount
         AskAudienceCount = Q11.AskAudienceCount
+        DoubleDipCount = Q11.DoubleDipCount
 
         'play the Final Intro Music
         My.Computer.Audio.Play(My.Resources.DoubleDipandFinalIntro, AudioPlayMode.Background)
@@ -57,6 +59,13 @@
             'hide and disable the Ask a Friend Lifeline
             AskPic.Visible = False
             PlayerScreen.AskPic.Visible = False
+        End If
+
+        'check to see if Double Dip is used
+        If doubledipcount = 1 Then
+            'hide and disable the Double Dip Lifeline
+            DoubleDipPic.Visible = False
+            PlayerScreen.DoubleDipPic.Visible = False
         End If
     End Sub
 
@@ -450,9 +459,12 @@
         'show the count file
         Select Case count
             Case 2
-                'show the 50:50
-                FiftyFiftyPic.Visible = True
-                PlayerScreen.FiftyFiftyPic.Visible = True
+                If Money08.Visible = True Then
+                    'show second chance button
+                    btnSecondChance.Visible = True
+                Else
+                    Exit Select
+                End If
             Case 3
                 'show the Level 4 Rules
                 Level4Label.Visible = True
@@ -480,5 +492,28 @@
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         'exit the program
         Application.Exit()
+    End Sub
+
+    Private Sub btnSecondChance_Click(sender As Object, e As EventArgs) Handles btnSecondChance.Click
+        If Money12.Visible = True Then
+            'show Money12 as ¥2,000,000
+            Money12.Text = "¥2,000,000"
+            PlayerScreen.Money12.Text = "¥2,000,000"
+        Else
+            'show Money12
+            Money12.Visible = True
+            PlayerScreen.Money12.Visible = True
+        End If
+
+        'hide the other lifelines
+        AskPic.Visible = False
+        PlayerScreen.AskPic.Visible = False
+        AskFriendPic.Visible = False
+        PlayerScreen.AskFriendPic.Visible = False
+        DoubleDipPic.Visible = False
+        PlayerScreen.DoubleDipPic.Visible = False
+
+        'display count to 4
+        count = 4
     End Sub
 End Class

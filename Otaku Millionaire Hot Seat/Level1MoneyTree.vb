@@ -326,23 +326,14 @@
                 Money12.BackColor = Color.Gold
                 PlayerScreen.Money12.BackColor = Color.Gold
             Case 13
-                'hide DoubleDipPic
-                DoubleDipPic.Visible = False
-                PlayerScreen.DoubleDipPic.Visible = False
-
-                'show the 50:50 lifeline
-                FiftyFiftyPic.Visible = True
-                PlayerScreen.FiftyFiftyPic.Visible = True
-            Case 14
                 'hide all other Lifelines
                 AskFriendPic.Visible = False
                 AskPic.Visible = False
-                FiftyFiftyPic.Visible = False
                 TrustPic.Visible = False
+                DoubleDipPic.Visible = False
                 PlayerScreen.AskFriendPic.Visible = False
                 PlayerScreen.AskPic.Visible = False
-                    PlayerScreen.FiftyFiftyPic.Visible = False
-                    PlayerScreen.TrustPic.Visible = False
+                PlayerScreen.TrustPic.Visible = False
             Case 15
                 'show the first detail label
                 MainDetail1.Visible = True

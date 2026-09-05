@@ -3,15 +3,12 @@
     Friend GPlayersRemaining As Integer 'declare playersRemaining as Integer
     Friend GPlayerNumber As Integer 'declare GPlayerNumber as Integer
     Friend questionsRemaining As Integer 'declare questionsRemaining as Integer
+    Friend SHQuestionsRemaining As Integer 'declare safeHavenQuestionsRemaining as Integer
+    Friend passUsage As Integer 'declare passUsage as Integer
     Friend AskFriendCount As Integer 'declare AskFriendCount as Integer
     Friend DoubleDipCount As Integer 'declare DoubleDipCount as Integer
-    Friend AskAudienceCount As Integer 'declare AskAudienceCount as Integer
-    Friend AskA As Integer 'declare AskA as Integer
-    Friend AskB As Integer 'declare AskB as Integer
-    Friend AskC As Integer 'declare AskC as Integer
-    Friend AskD As Integer 'declare AskD as Integer
     Friend Trust As Integer 'declare Trust as Integer
-    Friend TimeSeconds As Integer = 45 'declare TimeSeconds as Integer
+    Friend TimeSeconds As Integer = 30 'declare TimeSeconds as Integer
     Friend TimeTenths As Integer = 0 'declare Timetenths as Integer
     Dim choice As String 'set choice as string
     Dim answer As String 'set answer as string
@@ -20,9 +17,8 @@
     Dim CountC As Integer 'declare CountC as Integer
     Dim CountD As Integer 'declare CountD as Integer
     Dim ButtonCount As Integer 'declare ButtonCount as Integer
+    Dim passcount As Integer 'declare passcount as Integer
     Dim guess As Integer 'declare guess as Integer
-    Friend ask As Integer 'declare ask as Integer
-    Friend AskSum As Integer 'declare asksum as Integer
     Dim DDEnable As Integer = 0 'declare DDEnable as Integer
 
     Private Sub Q09_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -30,73 +26,103 @@
         GPlayersRemaining = Q08.GPlayersRemaining
         GPlayerNumber = Q08.GPlayerNumber
         questionsRemaining = Q08.questionsRemaining
+        SHQuestionsRemaining = Q08.SHQuestionsRemaining
+        passUsage = Q08.passUsage
         AskFriendCount = Q08.AskFriendCount
         DoubleDipCount = Q08.DoubleDipCount
-        AskAudienceCount = Q08.AskAudienceCount
         TopPrizeAmount.Text = Q08.TopPrizeAmount.Text
         Trust = Q08.Trust
 
         Winnings.question = 9
 
-        'play the question Transiton Music
-        My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
-
         'perform question loading and reset clock
-        PlayerScreen.Seconds.Text = CStr(45)
+        PlayerScreen.Seconds.Text = CStr(30)
         PlayerScreen.Tenths.Text = CStr(0)
         QuestionLoading()
 
         If GPlayersRemaining = 6 Then
+            'play the question Transiton Music
+            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+
             'set QuestionValue to Question 9 Value
-            QuestionValue.Text = "¥50,000"
-
-            'transfer value to PlayerScreen
-            PlayerScreen.QuestionValue.Text = QuestionValue.Text
-        ElseIf GPlayersRemaining = 5 Then
-            'set new risk value to ¥150,000
-            AmountAtRisk.Text = "¥150,000"
-
-            'set the value to Question 8
-            QuestionValue.Text = "¥20,000"
-
-            'transfer value to PlayerScreen
-            PlayerScreen.QuestionValue.Text = QuestionValue.Text
-        ElseIf GPlayersRemaining = 4 Then
-            'set new risk value to ¥50,000
-            AmountAtRisk.Text = "¥50,000"
-
-            'set the value to question 7
-            QuestionValue.Text = "¥10,000"
-
-            'transfer value to PlayerScreen
-            PlayerScreen.QuestionValue.Text = QuestionValue.Text
-        ElseIf GPlayersRemaining = 3 Then
-            'set new risk value to ¥30,000
-            AmountAtRisk.Text = "¥30,000"
-
-            'set the value to question 6
             QuestionValue.Text = "¥6,000"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
-        ElseIf GPlayersRemaining = 2 Then
-            'set new risk value to ¥10,000
-            AmountAtRisk.Text = "¥10,000"
 
-            'set the value to question 5
+            'hide the SHQuestionRemaining
+            SafeHavenQuestionsRemaining.Visible = False
+        ElseIf GPlayersRemaining = 5 Then
+            'play the question Transiton Music
+            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+
+            'set new risk value to ¥150,000
+            AmountAtRisk.Text = "¥150,000"
+
+            'hide the SHQuestionRemaining
+            SafeHavenQuestionsRemaining.Visible = False
+
+            'set the value to question 8
             QuestionValue.Text = "¥4,000"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
-        Else
-            'set new risk value to ¥9,000
-            AmountAtRisk.Text = "¥9,000"
+        ElseIf GPlayersRemaining = 4 Then
+            'play the question Transiton Music
+            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
 
-            'set questionValue to Question 4 Value
+            'set new risk value to ¥50,000
+            AmountAtRisk.Text = "¥50,000"
+
+            'hide the SHQuestionRemaining
+            SafeHavenQuestionsRemaining.Visible = False
+
+            'set the value to question 7
             QuestionValue.Text = "¥2,500"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
+        ElseIf GPlayersRemaining = 3 Then
+            If Q08.QuestionValue.Text = "¥1,000" Then
+                'play the transition music
+                My.Computer.Audio.Play(My.Resources.LevelTransitionMusic, AudioPlayMode.Background)
+            Else
+                'play the question Transiton Music
+                My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+            End If
+
+            'set new risk value to ¥30,000
+            AmountAtRisk.Text = "¥30,000"
+
+            'hide the SHQuestionRemaining
+            SafeHavenQuestionsRemaining.Visible = False
+
+            'set the value to question 6
+            QuestionValue.Text = "¥1,500"
+
+            'transfer value to PlayerScreen
+            PlayerScreen.QuestionValue.Text = QuestionValue.Text
+        ElseIf GPlayersRemaining = 2 Then
+            'play the question Transiton Music
+            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+
+            'set new risk value to ¥10,000
+            AmountAtRisk.Text = "¥10,000"
+
+            'set the value to question 5
+            QuestionValue.Text = "¥1,000"
+
+            'transfer value to PlayerScreen
+            PlayerScreen.QuestionValue.Text = QuestionValue.Text
+        Else
+            'play the question Transiton Music
+            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+
+            'set new risk value to ¥10,000
+            AmountAtRisk.Text = "¥10,000"
+
+            'set questionValue to Question 4 Value
+            QuestionValue.Text = "¥500"
         End If
 
         'perfrom Lifeline Used
@@ -104,6 +130,7 @@
 
         'show the numbers
         TopPrizeQuestionRemaining.Text = CStr(questionsRemaining)
+        SafeHavenQuestionsRemaining.Text = CStr(SHQuestionsRemaining)
         PlayersRemaining.Text = CStr(GPlayersRemaining)
 
         'close Question 8
@@ -111,6 +138,13 @@
     End Sub
 
     Sub LifelineUsed()
+        'check if the usage of the Pass Lifeline is more than the players remaining
+        If passUsage >= GPlayersRemaining Then
+            'hide and disable the Pass Lifeline
+            PassPic.Visible = False
+            PlayerScreen.PassPic.Visible = False
+        End If
+
         'check to see if Ask a Friend is used
         If AskFriendCount = 1 Then
             'hide and disable the Ask a Friend Lifeline
@@ -123,13 +157,6 @@
             'hide and disable the Double Dip Lifeline
             DoubleDipPic.Visible = False
             PlayerScreen.DoubleDipPic.Visible = False
-        End If
-
-        'check to see if Ask the Audience is used
-        If AskAudienceCount = 1 Then
-            'hide and disable the Ask a Friend Lifeline
-            AskPic.Visible = False
-            PlayerScreen.AskPic.Visible = False
         End If
 
         'check to see if Trust the Computer is used
@@ -265,12 +292,31 @@
 
                 'show if correct is the answer
                 If Correct.Visible = True Or choice = answer Then
-                    If GPlayersRemaining = 4 Then
-                        'play Question 7 Correct Answer
-                        My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
+                    'check to see if SafeHavenQuestionsRemaining is Visible
+                    If SafeHavenQuestionsRemaining.Visible = True Then
+                        'take away one from safe haven
+                        SHQuestionsRemaining -= 1
+                        SafeHavenQuestionsRemaining.Text = CStr(SHQuestionsRemaining)
+                    End If
+
+                    If SHQuestionsRemaining = 0 And QuestionValue.Text = "¥1,000" Then
+                        'hide the SafeHavenQuestionsRemaining Lable
+                        SafeHavenQuestionsRemaining.Visible = False
+
+                        'play the ¥1,000 Music
+                        My.Computer.Audio.Play(My.Resources.OneThousandYenWon, AudioPlayMode.Background)
+
+                        'set amount at risk to ¥9,000
+                        AmountAtRisk.Text = "¥9,000"
                     Else
                         'play Question 9 Correct Answer
                         My.Computer.Audio.Play(My.Resources.Question9Correct, AudioPlayMode.Background)
+                    End If
+
+                    If passUsage < GPlayersRemaining Then
+                        'show the pass Lifeline Picture
+                        PassPic.Visible = True
+                        PlayerScreen.PassPic.Visible = True
                     End If
 
                     If DoubleDipCount = 0 Then
@@ -283,12 +329,6 @@
                         'show the Ask Friend Picture
                         AskFriendPic.Visible = True
                         PlayerScreen.AskFriendPic.Visible = True
-                    End If
-
-                    If AskAudienceCount = 0 Then
-                        'show the Ask Friend Picture
-                        AskPic.Visible = True
-                        PlayerScreen.AskPic.Visible = True
                     End If
 
                     If Trust = 0 Then
@@ -372,15 +412,9 @@
                         'set top prize amount
                         TopPrizeAmount.Text = "¥10,000"
 
-                        'set new risk value to ¥9,000
-                        AmountAtRisk.Text = "¥9,000"
+                        'set new risk value to ¥10,000
+                        AmountAtRisk.Text = "¥10,000"
                     Else
-                        'show Winnings window
-                        Winnings.Show()
-
-                        Winnings.AmountWon.Text = "¥1,000"
-                        PlayerScreen.AmountWon.Text = "¥1,000"
-
                         'show the final picture and winnings on player screen
                         PlayerScreen.EndShowLogo.Visible = True
                         PlayerScreen.AmountWon.Visible = True
@@ -388,11 +422,20 @@
                         'reset questions
                         PlayerScreen.EndOfGame()
 
-                        'close Question Window
+                        'show Winnings window
+                        Winnings.Show()
+
+                        'close Question 6 Window
                         Close()
 
                         'exit sub
                         Exit Sub
+                    End If
+
+                    If passUsage < GPlayersRemaining Then
+                        'show the pass Lifeline Picture
+                        PassPic.Visible = True
+                        PlayerScreen.PassPic.Visible = True
                     End If
 
                     If DoubleDipCount = 0 Then
@@ -405,12 +448,6 @@
                         'show the Ask Friend Picture
                         AskFriendPic.Visible = True
                         PlayerScreen.AskFriendPic.Visible = True
-                    End If
-
-                    If AskAudienceCount = 0 Then
-                        'show the Ask Friend Picture
-                        AskPic.Visible = True
-                        PlayerScreen.AskPic.Visible = True
                     End If
 
                     If Trust = 0 Then
@@ -426,11 +463,11 @@
                     'reset questions
                     PlayerScreen.ResetQuestionArea()
 
-                    'open the Question 10 Window
+                    'open the tenth question
                     Q10.Show()
                 End If
             Case 4
-                'open the Question 10 Window 
+                'open the tenth question
                 Q10.Show()
         End Select
 
@@ -441,7 +478,7 @@
     Private Sub TenthsClock_Tick(sender As Object, e As EventArgs) Handles TenthsClock.Tick
         'take one away from seconds
         If TimeTenths = 0 Then
-            If TimeSeconds = 45 Or TimeSeconds = 30 Or TimeSeconds = 15 Then
+            If TimeSeconds = 30 Or TimeSeconds = 15 Then
                 'take away one from seconds
                 TimeSeconds -= 1
                 Seconds.Text = CStr(TimeSeconds)
@@ -456,11 +493,13 @@
                 TenthsClock.Stop()
                 SecondsClock.Stop()
 
-                'show the incorrect label
-                Incorrect.Visible = True
+                If PassPic.Visible = False Then
+                    'show the incorrect label
+                    Incorrect.Visible = True
 
-                'enable MasterButton
-                MasterButton.Enabled = True
+                    'enable MasterButton
+                    MasterButton.Enabled = True
+                End If
             End If
         Else
             'take one away from tenths
@@ -559,7 +598,7 @@
 
         'stop the audio and play the proper Final Answer Sound
         My.Computer.Audio.Stop()
-        If DoubleDipPic.Visible = True And guess = 1 And DDEnable = 1 Then
+        If DoubleDipPic.Visible = True And guess = 1 And PassPic.Visible = False Then
             'play the first double dip final answer
             My.Computer.Audio.Play(My.Resources.DoubleDipFinalAnswer, AudioPlayMode.Background)
         Else
@@ -628,7 +667,7 @@
         End If
 
         'Check to see which button is visible
-        If guess = 1 And (DDEnable = 1 And DoubleDipPic.Visible = True And AskPic.Visible = False And AskFriendPic.Visible = False And TrustPic.Visible = False) Then
+        If guess = 1 And (DDEnable = 1 And DoubleDipPic.Visible = True And PassPic.Visible = False And AskFriendPic.Visible = False And TrustPic.Visible = False) Then
             'disable the MasterButton
             MasterButton.Enabled = False
         Else
@@ -695,12 +734,16 @@
             QuestionValue.ForeColor = Color.White
 
             'change the color of the topic to green
+            Level3MoneyTree.Topic09.BackColor = Color.Green
+            Level3MoneyTree.Topic09.ForeColor = Color.White
             Level4MoneyTree.Topic09.BackColor = Color.Green
             Level4MoneyTree.Topic09.ForeColor = Color.White
             PlayerScreen.Topic09.BackColor = Color.Green
             PlayerScreen.Topic09.ForeColor = Color.White
         Else
             'change the color of the topic to red
+            Level3MoneyTree.Topic09.BackColor = Color.Red
+            Level3MoneyTree.Topic09.ForeColor = Color.White
             Level4MoneyTree.Topic09.BackColor = Color.Red
             Level4MoneyTree.Topic09.ForeColor = Color.White
             PlayerScreen.Topic09.BackColor = Color.Red
@@ -716,17 +759,13 @@
                 SecondsClock.Stop()
 
                 'check the clock for second time
-                Select Case TimeSeconds
-                    Case >= 30
-                        'reset seconds to 45
-                        TimeSeconds = 45
-                    Case >= 15
-                        'reset seconds to 30
-                        TimeSeconds = 30
-                    Case Else
-                        'reset seconds to 15
-                        TimeSeconds = 15
-                End Select
+                If TimeSeconds >= 15 Then
+                    'reset seconds to 30
+                    TimeSeconds = 30
+                Else
+                    'reset seconds to 15
+                    TimeSeconds = 15
+                End If
 
                 'display the seconds
                 Seconds.Text = CStr(TimeSeconds)
@@ -756,7 +795,7 @@
 
                 'hide the other lifelines
                 AskFriendPic.Visible = False
-                AskPic.Visible = False
+                PassPic.Visible = False
                 TrustPic.Visible = False
                 PlayerScreen.AskFriendPic.Visible = False
                 PlayerScreen.PassPic.Visible = False
@@ -780,18 +819,31 @@
                     questionsRemaining = questionsRemaining - 1
                     TopPrizeQuestionRemaining.Text = CStr(questionsRemaining)
 
-                    If GPlayersRemaining = 4 Then
-                        'play Question 7 Correct Answer
-                        My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
+                    'check to see if SafeHavenQuestionsRemaining is Visible
+                    If SafeHavenQuestionsRemaining.Visible = True Then
+                        'take away one from safe haven
+                        SHQuestionsRemaining -= 1
+                        SafeHavenQuestionsRemaining.Text = CStr(SHQuestionsRemaining)
+                    End If
+
+                    If SHQuestionsRemaining = 0 And QuestionValue.Text = "¥1,000" Then
+                        'hide the SafeHavenQuestionsRemaining Lable
+                        SafeHavenQuestionsRemaining.Visible = False
+
+                        'play the ¥1,000 Music
+                        My.Computer.Audio.Play(My.Resources.OneThousandYenWon, AudioPlayMode.Background)
+
+                        'set amount at risk to ¥9,000
+                        AmountAtRisk.Text = "¥9,000"
                     Else
                         'play Question 9 Correct Answer
                         My.Computer.Audio.Play(My.Resources.Question9Correct, AudioPlayMode.Background)
                     End If
 
-                    If AskAudienceCount = 0 Then
-                        'show the Ask Friend Picture
-                        AskPic.Visible = True
-                        PlayerScreen.AskPic.Visible = True
+                    If passUsage < GPlayersRemaining Then
+                        'show the pass Lifeline Picture
+                        PassPic.Visible = True
+                        PlayerScreen.PassPic.Visible = True
                     End If
 
                     If AskFriendCount = 0 Then
@@ -800,14 +852,14 @@
                         PlayerScreen.AskFriendPic.Visible = True
                     End If
 
-                    If Trust = 1 Then
-                        'hide the Trust the Computer Picture
-                        TrustPic.Visible = False
-                        PlayerScreen.TrustPic.Visible = False
-                    Else
+                    If Trust = 0 Then
                         'show the Trust the computer Picture
                         TrustPic.Visible = True
                         PlayerScreen.TrustPic.Visible = True
+                    Else
+                        'hide the Trust the Computer Picture
+                        TrustPic.Visible = False
+                        PlayerScreen.TrustPic.Visible = False
                     End If
 
                     'enable the MasterButton and Disable the Double Dip
@@ -867,14 +919,11 @@
         TenthsClock.Start()
 
         'check for the apporate music for the clock
-        Select Case TimeSeconds
-            Case 45
-                My.Computer.Audio.Play(My.Resources.Question9, AudioPlayMode.Background)
-            Case 30
-                My.Computer.Audio.Play(My.Resources.Question9_30, AudioPlayMode.Background)
-            Case 15
-                My.Computer.Audio.Play(My.Resources.Question9_15, AudioPlayMode.Background)
-        End Select
+        If TimeSeconds = 30 Then
+            My.Computer.Audio.Play(My.Resources.Question9, AudioPlayMode.Background)
+        Else
+            My.Computer.Audio.Play(My.Resources.Question9_15, AudioPlayMode.Background)
+        End If
     End Sub
 
     Private Sub AskFriendPic_Click(sender As Object, e As EventArgs) Handles AskFriendPic.Click
@@ -889,18 +938,15 @@
                 My.Computer.Audio.Play(My.Resources.AskAFriend, AudioPlayMode.Background)
 
                 'hide the other lifelines
-                AskPic.Visible = False
-                PlayerScreen.AskPic.Visible = False
+                PassPic.Visible = False
+                PlayerScreen.PassPic.Visible = False
                 DoubleDipPic.Visible = False
                 PlayerScreen.DoubleDipPic.Visible = False
                 TrustPic.Visible = False
                 PlayerScreen.TrustPic.Visible = False
 
                 'check the clock for second time
-                If TimeSeconds >= 30 Then
-                    'reset seconds to 45
-                    TimeSeconds = 45
-                ElseIf TimeSeconds >= 15 Then
+                If TimeSeconds >= 15 Then
                     'reset seconds to 30
                     TimeSeconds = 30
                 Else
@@ -945,99 +991,61 @@
         End Select
     End Sub
 
-    Private Sub AskPic_Click(sender As Object, e As EventArgs) Handles AskPic.Click
-        'perform asklifeline
-        asklifeline()
+    Private Sub PassPic_Click(sender As Object, e As EventArgs) Handles PassPic.Click
+        If passcount = 0 Then
+            'stop the clock
+            TenthsClock.Stop()
+            SecondsClock.Stop()
 
-        'open the results
-        AskResult.Show()
-    End Sub
+            'reset Clock to 30
+            TimeSeconds = 30
+            Seconds.Text = CStr(TimeSeconds)
+            PlayerScreen.Seconds.Text = CStr(TimeSeconds)
+            TimeTenths = 0
+            Tenths.Text = CStr(TimeTenths)
+            PlayerScreen.Tenths.Text = CStr(TimeTenths)
 
-    Public Sub asklifeline()
-        Select Case ask
-            Case 0
-                'stop the clock
-                TenthsClock.Stop()
-                SecondsClock.Stop()
+            'reset the clock background
+            Seconds.BackColor = DefaultBackColor
+            Seconds.ForeColor = DefaultForeColor
+            Placeholder.BackColor = DefaultBackColor
+            Placeholder.ForeColor = DefaultForeColor
+            Tenths.BackColor = DefaultBackColor
+            Tenths.ForeColor = DefaultForeColor
+            PlayerScreen.Seconds.BackColor = DefaultBackColor
+            PlayerScreen.Seconds.ForeColor = DefaultForeColor
+            PlayerScreen.Placeholder.BackColor = DefaultBackColor
+            PlayerScreen.Placeholder.ForeColor = DefaultForeColor
+            PlayerScreen.Tenths.BackColor = DefaultBackColor
+            PlayerScreen.Tenths.ForeColor = DefaultForeColor
 
-                'Change to Ask the Audience Music
-                My.Computer.Audio.Stop()
-                My.Computer.Audio.Play(My.Resources.AskLifelineSurvay, AudioPlayMode.BackgroundLoop)
+            'hide the Pass and Double Dip Lifeline Picture
+            DoubleDipPic.Visible = False
+            PlayerScreen.PassPic.Visible = False
+            PlayerScreen.DoubleDipPic.Visible = False
 
-                'check the clock for second time
-                Select Case TimeSeconds
-                    Case >= 30
-                        'reset seconds to 45
-                        TimeSeconds = 45
-                    Case >= 15
-                        'reset seconds to 30
-                        TimeSeconds = 30
-                    Case Else
-                        'reset seconds to 15
-                        TimeSeconds = 15
-                End Select
+            'play the next player in music
+            My.Computer.Audio.Stop()
+            My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
 
-                'display the seconds
-                Seconds.Text = CStr(TimeSeconds)
-                PlayerScreen.Seconds.Text = CStr(TimeSeconds)
+            'hide player choices
+            PlayerScreen.HideChoices()
 
-                'check the clock for tenths place if it is at zero
-                If TimeTenths <> 0 Then
-                    'reset the tenths to zero
-                    TimeTenths = 0
-                    Tenths.Text = CStr(TimeTenths)
-                    PlayerScreen.Tenths.Text = CStr(TimeTenths)
-                End If
+            'add one to passUsage
+            passUsage += 1
 
-                'reset the clock background
-                Seconds.BackColor = DefaultBackColor
-                Seconds.ForeColor = DefaultForeColor
-                Placeholder.BackColor = DefaultBackColor
-                Placeholder.ForeColor = DefaultForeColor
-                Tenths.BackColor = DefaultBackColor
-                Tenths.ForeColor = DefaultForeColor
+            'add one to passcount
+            passcount += 1
+        Else
+            'show player choices
+            PlayerScreen.ShowChoices()
 
-                'load the questions remaining in the ask the audience results
-                AskResult.questionsRemaining = questionsRemaining
+            'disable pass button
+            PassPic.Visible = False
 
-                'put in the vote in the Audience
-                AskA = CInt(InputBox("How many voted for Choice A?", "Ask The Audience", "0"))
-                AskB = CInt(InputBox("How many voted for Choice B?", "Ask The Audience", "0"))
-                AskC = CInt(InputBox("How many voted for Choice C?", "Ask The Audience", "0"))
-                AskD = CInt(InputBox("How many voted for Choice D?", "Ask The Audience", "0"))
-
-                'Combine AskSum Number
-                AskSum = AskA + AskB + AskC + AskD
-
-                'add one to Ask Audinece Count
-                AskAudienceCount += 1
-            Case 1
-                'hide result on PlayerScreen
-                PlayerScreen.A.Visible = False
-                PlayerScreen.Result1.Visible = False
-                PlayerScreen.PercentA.Visible = False
-                PlayerScreen.B.Visible = False
-                PlayerScreen.Result2.Visible = False
-                PlayerScreen.PercentB.Visible = False
-                PlayerScreen.C.Visible = False
-                PlayerScreen.Result3.Visible = False
-                PlayerScreen.PercentC.Visible = False
-                PlayerScreen.D.Visible = False
-                PlayerScreen.Result4.Visible = False
-                PlayerScreen.PercentD.Visible = False
-
-                'hide the Ask The Audience and Trust Picture
-                AskPic.Visible = False
-                PlayerScreen.AskPic.Visible = False
-                TrustPic.Visible = False
-                PlayerScreen.TrustPic.Visible = False
-
-                'close AskResult
-                AskResult.Close()
-
-                'restart the clock
-                RestartQuestionClock()
-        End Select
+            'restart clock
+            RestartQuestionClock()
+        End If
     End Sub
 
     Private Sub TrustPic_Click(sender As Object, e As EventArgs) Handles TrustPic.Click

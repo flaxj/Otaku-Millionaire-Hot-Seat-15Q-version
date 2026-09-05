@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class PlayerScreen
     Inherits System.Windows.Forms.Form
 
@@ -39,30 +39,6 @@ Partial Class PlayerScreen
         Me.ChoiceD = New System.Windows.Forms.Label()
         Me.TrustPic = New System.Windows.Forms.PictureBox()
         Me.AskFriendPic = New System.Windows.Forms.PictureBox()
-        Me.Money12 = New System.Windows.Forms.Label()
-        Me.Money11 = New System.Windows.Forms.Label()
-        Me.Money10 = New System.Windows.Forms.Label()
-        Me.Money09 = New System.Windows.Forms.Label()
-        Me.Money08 = New System.Windows.Forms.Label()
-        Me.Money07 = New System.Windows.Forms.Label()
-        Me.Money06 = New System.Windows.Forms.Label()
-        Me.Money05 = New System.Windows.Forms.Label()
-        Me.Money04 = New System.Windows.Forms.Label()
-        Me.Money03 = New System.Windows.Forms.Label()
-        Me.Money02 = New System.Windows.Forms.Label()
-        Me.Money01 = New System.Windows.Forms.Label()
-        Me.Topic12 = New System.Windows.Forms.Label()
-        Me.Topic11 = New System.Windows.Forms.Label()
-        Me.Topic10 = New System.Windows.Forms.Label()
-        Me.Topic09 = New System.Windows.Forms.Label()
-        Me.Topic08 = New System.Windows.Forms.Label()
-        Me.Topic07 = New System.Windows.Forms.Label()
-        Me.Topic06 = New System.Windows.Forms.Label()
-        Me.Topic05 = New System.Windows.Forms.Label()
-        Me.Topic04 = New System.Windows.Forms.Label()
-        Me.Topic03 = New System.Windows.Forms.Label()
-        Me.Topic02 = New System.Windows.Forms.Label()
-        Me.Topic01 = New System.Windows.Forms.Label()
         Me.PassPic = New System.Windows.Forms.PictureBox()
         Me.DoubleDipPic = New System.Windows.Forms.PictureBox()
         Me.AskPic = New System.Windows.Forms.PictureBox()
@@ -79,6 +55,36 @@ Partial Class PlayerScreen
         Me.PercentB = New System.Windows.Forms.Label()
         Me.PercentC = New System.Windows.Forms.Label()
         Me.PercentD = New System.Windows.Forms.Label()
+        Me.Money01 = New System.Windows.Forms.Label()
+        Me.Money02 = New System.Windows.Forms.Label()
+        Me.Money03 = New System.Windows.Forms.Label()
+        Me.Money04 = New System.Windows.Forms.Label()
+        Me.Money10 = New System.Windows.Forms.Label()
+        Me.Money09 = New System.Windows.Forms.Label()
+        Me.Money08 = New System.Windows.Forms.Label()
+        Me.Money07 = New System.Windows.Forms.Label()
+        Me.Money06 = New System.Windows.Forms.Label()
+        Me.Money05 = New System.Windows.Forms.Label()
+        Me.Money11 = New System.Windows.Forms.Label()
+        Me.Money12 = New System.Windows.Forms.Label()
+        Me.Money13 = New System.Windows.Forms.Label()
+        Me.Money14 = New System.Windows.Forms.Label()
+        Me.Money15 = New System.Windows.Forms.Label()
+        Me.Topic15 = New System.Windows.Forms.Label()
+        Me.Topic14 = New System.Windows.Forms.Label()
+        Me.Topic13 = New System.Windows.Forms.Label()
+        Me.Topic01 = New System.Windows.Forms.Label()
+        Me.Topic12 = New System.Windows.Forms.Label()
+        Me.Topic11 = New System.Windows.Forms.Label()
+        Me.Topic10 = New System.Windows.Forms.Label()
+        Me.Topic09 = New System.Windows.Forms.Label()
+        Me.Topic08 = New System.Windows.Forms.Label()
+        Me.Topic07 = New System.Windows.Forms.Label()
+        Me.Topic06 = New System.Windows.Forms.Label()
+        Me.Topic05 = New System.Windows.Forms.Label()
+        Me.Topic04 = New System.Windows.Forms.Label()
+        Me.Topic03 = New System.Windows.Forms.Label()
+        Me.Topic02 = New System.Windows.Forms.Label()
         CType(Me.EndShowLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrustPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AskFriendPic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -275,270 +281,6 @@ Partial Class PlayerScreen
         Me.AskFriendPic.TabStop = False
         Me.AskFriendPic.Visible = False
         '
-        'Money12
-        '
-        Me.Money12.AutoSize = True
-        Me.Money12.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money12.Location = New System.Drawing.Point(890, 101)
-        Me.Money12.Name = "Money12"
-        Me.Money12.Size = New System.Drawing.Size(216, 42)
-        Me.Money12.TabIndex = 271
-        Me.Money12.Text = "¥1,000,000"
-        Me.Money12.Visible = False
-        '
-        'Money11
-        '
-        Me.Money11.AutoSize = True
-        Me.Money11.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money11.Location = New System.Drawing.Point(890, 143)
-        Me.Money11.Name = "Money11"
-        Me.Money11.Size = New System.Drawing.Size(175, 42)
-        Me.Money11.TabIndex = 270
-        Me.Money11.Text = "¥250,000"
-        Me.Money11.Visible = False
-        '
-        'Money10
-        '
-        Me.Money10.AutoSize = True
-        Me.Money10.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money10.Location = New System.Drawing.Point(890, 185)
-        Me.Money10.Name = "Money10"
-        Me.Money10.Size = New System.Drawing.Size(175, 42)
-        Me.Money10.TabIndex = 269
-        Me.Money10.Text = "¥100,000"
-        Me.Money10.Visible = False
-        '
-        'Money09
-        '
-        Me.Money09.AutoSize = True
-        Me.Money09.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money09.Location = New System.Drawing.Point(890, 227)
-        Me.Money09.Name = "Money09"
-        Me.Money09.Size = New System.Drawing.Size(154, 42)
-        Me.Money09.TabIndex = 268
-        Me.Money09.Text = "¥50,000"
-        Me.Money09.Visible = False
-        '
-        'Money08
-        '
-        Me.Money08.AutoSize = True
-        Me.Money08.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money08.Location = New System.Drawing.Point(890, 269)
-        Me.Money08.Name = "Money08"
-        Me.Money08.Size = New System.Drawing.Size(154, 42)
-        Me.Money08.TabIndex = 267
-        Me.Money08.Text = "¥20,000"
-        Me.Money08.Visible = False
-        '
-        'Money07
-        '
-        Me.Money07.AutoSize = True
-        Me.Money07.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money07.Location = New System.Drawing.Point(890, 311)
-        Me.Money07.Name = "Money07"
-        Me.Money07.Size = New System.Drawing.Size(154, 42)
-        Me.Money07.TabIndex = 266
-        Me.Money07.Text = "¥10,000"
-        Me.Money07.Visible = False
-        '
-        'Money06
-        '
-        Me.Money06.AutoSize = True
-        Me.Money06.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money06.Location = New System.Drawing.Point(890, 353)
-        Me.Money06.Name = "Money06"
-        Me.Money06.Size = New System.Drawing.Size(133, 42)
-        Me.Money06.TabIndex = 265
-        Me.Money06.Text = "¥6,000"
-        Me.Money06.Visible = False
-        '
-        'Money05
-        '
-        Me.Money05.AutoSize = True
-        Me.Money05.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money05.Location = New System.Drawing.Point(890, 395)
-        Me.Money05.Name = "Money05"
-        Me.Money05.Size = New System.Drawing.Size(133, 42)
-        Me.Money05.TabIndex = 264
-        Me.Money05.Text = "¥4,000"
-        Me.Money05.Visible = False
-        '
-        'Money04
-        '
-        Me.Money04.AutoSize = True
-        Me.Money04.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money04.Location = New System.Drawing.Point(890, 437)
-        Me.Money04.Name = "Money04"
-        Me.Money04.Size = New System.Drawing.Size(133, 42)
-        Me.Money04.TabIndex = 263
-        Me.Money04.Text = "¥2,500"
-        Me.Money04.Visible = False
-        '
-        'Money03
-        '
-        Me.Money03.AutoSize = True
-        Me.Money03.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money03.Location = New System.Drawing.Point(890, 479)
-        Me.Money03.Name = "Money03"
-        Me.Money03.Size = New System.Drawing.Size(133, 42)
-        Me.Money03.TabIndex = 262
-        Me.Money03.Text = "¥1,500"
-        Me.Money03.Visible = False
-        '
-        'Money02
-        '
-        Me.Money02.AutoSize = True
-        Me.Money02.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money02.Location = New System.Drawing.Point(890, 521)
-        Me.Money02.Name = "Money02"
-        Me.Money02.Size = New System.Drawing.Size(139, 42)
-        Me.Money02.TabIndex = 261
-        Me.Money02.Text = "¥1,000"
-        Me.Money02.Visible = False
-        '
-        'Money01
-        '
-        Me.Money01.AutoSize = True
-        Me.Money01.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Money01.Location = New System.Drawing.Point(890, 563)
-        Me.Money01.Name = "Money01"
-        Me.Money01.Size = New System.Drawing.Size(102, 42)
-        Me.Money01.TabIndex = 260
-        Me.Money01.Text = "¥500"
-        Me.Money01.Visible = False
-        '
-        'Topic12
-        '
-        Me.Topic12.AutoSize = True
-        Me.Topic12.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic12.Location = New System.Drawing.Point(890, 101)
-        Me.Topic12.Name = "Topic12"
-        Me.Topic12.Size = New System.Drawing.Size(152, 42)
-        Me.Topic12.TabIndex = 259
-        Me.Topic12.Text = "Label12"
-        Me.Topic12.Visible = False
-        '
-        'Topic11
-        '
-        Me.Topic11.AutoSize = True
-        Me.Topic11.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic11.Location = New System.Drawing.Point(890, 143)
-        Me.Topic11.Name = "Topic11"
-        Me.Topic11.Size = New System.Drawing.Size(152, 42)
-        Me.Topic11.TabIndex = 258
-        Me.Topic11.Text = "Label11"
-        Me.Topic11.Visible = False
-        '
-        'Topic10
-        '
-        Me.Topic10.AutoSize = True
-        Me.Topic10.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic10.Location = New System.Drawing.Point(890, 185)
-        Me.Topic10.Name = "Topic10"
-        Me.Topic10.Size = New System.Drawing.Size(152, 42)
-        Me.Topic10.TabIndex = 257
-        Me.Topic10.Text = "Label10"
-        Me.Topic10.Visible = False
-        '
-        'Topic09
-        '
-        Me.Topic09.AutoSize = True
-        Me.Topic09.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic09.Location = New System.Drawing.Point(890, 227)
-        Me.Topic09.Name = "Topic09"
-        Me.Topic09.Size = New System.Drawing.Size(131, 42)
-        Me.Topic09.TabIndex = 256
-        Me.Topic09.Text = "Label9"
-        Me.Topic09.Visible = False
-        '
-        'Topic08
-        '
-        Me.Topic08.AutoSize = True
-        Me.Topic08.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic08.Location = New System.Drawing.Point(890, 269)
-        Me.Topic08.Name = "Topic08"
-        Me.Topic08.Size = New System.Drawing.Size(131, 42)
-        Me.Topic08.TabIndex = 255
-        Me.Topic08.Text = "Label8"
-        Me.Topic08.Visible = False
-        '
-        'Topic07
-        '
-        Me.Topic07.AutoSize = True
-        Me.Topic07.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic07.Location = New System.Drawing.Point(890, 311)
-        Me.Topic07.Name = "Topic07"
-        Me.Topic07.Size = New System.Drawing.Size(131, 42)
-        Me.Topic07.TabIndex = 254
-        Me.Topic07.Text = "Label7"
-        Me.Topic07.Visible = False
-        '
-        'Topic06
-        '
-        Me.Topic06.AutoSize = True
-        Me.Topic06.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic06.Location = New System.Drawing.Point(890, 353)
-        Me.Topic06.Name = "Topic06"
-        Me.Topic06.Size = New System.Drawing.Size(131, 42)
-        Me.Topic06.TabIndex = 253
-        Me.Topic06.Text = "Label6"
-        Me.Topic06.Visible = False
-        '
-        'Topic05
-        '
-        Me.Topic05.AutoSize = True
-        Me.Topic05.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic05.Location = New System.Drawing.Point(890, 395)
-        Me.Topic05.Name = "Topic05"
-        Me.Topic05.Size = New System.Drawing.Size(131, 42)
-        Me.Topic05.TabIndex = 252
-        Me.Topic05.Text = "Label5"
-        Me.Topic05.Visible = False
-        '
-        'Topic04
-        '
-        Me.Topic04.AutoSize = True
-        Me.Topic04.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic04.Location = New System.Drawing.Point(890, 437)
-        Me.Topic04.Name = "Topic04"
-        Me.Topic04.Size = New System.Drawing.Size(131, 42)
-        Me.Topic04.TabIndex = 251
-        Me.Topic04.Text = "Label4"
-        Me.Topic04.Visible = False
-        '
-        'Topic03
-        '
-        Me.Topic03.AutoSize = True
-        Me.Topic03.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic03.Location = New System.Drawing.Point(890, 479)
-        Me.Topic03.Name = "Topic03"
-        Me.Topic03.Size = New System.Drawing.Size(131, 42)
-        Me.Topic03.TabIndex = 250
-        Me.Topic03.Text = "Label3"
-        Me.Topic03.Visible = False
-        '
-        'Topic02
-        '
-        Me.Topic02.AutoSize = True
-        Me.Topic02.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic02.Location = New System.Drawing.Point(890, 521)
-        Me.Topic02.Name = "Topic02"
-        Me.Topic02.Size = New System.Drawing.Size(131, 42)
-        Me.Topic02.TabIndex = 249
-        Me.Topic02.Text = "Label2"
-        Me.Topic02.Visible = False
-        '
-        'Topic01
-        '
-        Me.Topic01.AutoSize = True
-        Me.Topic01.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Topic01.Location = New System.Drawing.Point(890, 563)
-        Me.Topic01.Name = "Topic01"
-        Me.Topic01.Size = New System.Drawing.Size(131, 42)
-        Me.Topic01.TabIndex = 248
-        Me.Topic01.Text = "Label1"
-        Me.Topic01.Visible = False
-        '
         'PassPic
         '
         Me.PassPic.Image = Global.Otaku_Millionaire_Hot_Seat.My.Resources.Resources.pass_lifeline
@@ -714,12 +456,357 @@ Partial Class PlayerScreen
         Me.PercentD.Text = "%"
         Me.PercentD.Visible = False
         '
+        'Money01
+        '
+        Me.Money01.AutoSize = True
+        Me.Money01.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money01.Location = New System.Drawing.Point(946, 580)
+        Me.Money01.Name = "Money01"
+        Me.Money01.Size = New System.Drawing.Size(79, 33)
+        Me.Money01.TabIndex = 337
+        Me.Money01.Text = "¥100"
+        '
+        'Money02
+        '
+        Me.Money02.AutoSize = True
+        Me.Money02.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money02.Location = New System.Drawing.Point(946, 547)
+        Me.Money02.Name = "Money02"
+        Me.Money02.Size = New System.Drawing.Size(79, 33)
+        Me.Money02.TabIndex = 349
+        Me.Money02.Text = "¥200"
+        '
+        'Money03
+        '
+        Me.Money03.AutoSize = True
+        Me.Money03.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money03.Location = New System.Drawing.Point(946, 514)
+        Me.Money03.Name = "Money03"
+        Me.Money03.Size = New System.Drawing.Size(79, 33)
+        Me.Money03.TabIndex = 351
+        Me.Money03.Text = "¥300"
+        '
+        'Money04
+        '
+        Me.Money04.AutoSize = True
+        Me.Money04.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money04.Location = New System.Drawing.Point(946, 481)
+        Me.Money04.Name = "Money04"
+        Me.Money04.Size = New System.Drawing.Size(79, 33)
+        Me.Money04.TabIndex = 350
+        Me.Money04.Text = "¥500"
+        '
+        'Money10
+        '
+        Me.Money10.AutoSize = True
+        Me.Money10.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money10.Location = New System.Drawing.Point(945, 283)
+        Me.Money10.Name = "Money10"
+        Me.Money10.Size = New System.Drawing.Size(119, 33)
+        Me.Money10.TabIndex = 343
+        Me.Money10.Text = "¥10,000"
+        '
+        'Money09
+        '
+        Me.Money09.AutoSize = True
+        Me.Money09.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money09.Location = New System.Drawing.Point(948, 316)
+        Me.Money09.Name = "Money09"
+        Me.Money09.Size = New System.Drawing.Size(103, 33)
+        Me.Money09.TabIndex = 342
+        Me.Money09.Text = "¥6,000"
+        '
+        'Money08
+        '
+        Me.Money08.AutoSize = True
+        Me.Money08.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money08.Location = New System.Drawing.Point(951, 349)
+        Me.Money08.Name = "Money08"
+        Me.Money08.Size = New System.Drawing.Size(103, 33)
+        Me.Money08.TabIndex = 341
+        Me.Money08.Text = "¥4,000"
+        '
+        'Money07
+        '
+        Me.Money07.AutoSize = True
+        Me.Money07.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money07.Location = New System.Drawing.Point(949, 382)
+        Me.Money07.Name = "Money07"
+        Me.Money07.Size = New System.Drawing.Size(103, 33)
+        Me.Money07.TabIndex = 340
+        Me.Money07.Text = "¥2,500"
+        '
+        'Money06
+        '
+        Me.Money06.AutoSize = True
+        Me.Money06.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money06.Location = New System.Drawing.Point(945, 415)
+        Me.Money06.Name = "Money06"
+        Me.Money06.Size = New System.Drawing.Size(103, 33)
+        Me.Money06.TabIndex = 339
+        Me.Money06.Text = "¥1,500"
+        '
+        'Money05
+        '
+        Me.Money05.AutoSize = True
+        Me.Money05.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money05.Location = New System.Drawing.Point(945, 448)
+        Me.Money05.Name = "Money05"
+        Me.Money05.Size = New System.Drawing.Size(109, 33)
+        Me.Money05.TabIndex = 338
+        Me.Money05.Text = "¥1,000"
+        '
+        'Money11
+        '
+        Me.Money11.AutoSize = True
+        Me.Money11.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money11.Location = New System.Drawing.Point(948, 247)
+        Me.Money11.Name = "Money11"
+        Me.Money11.Size = New System.Drawing.Size(119, 33)
+        Me.Money11.TabIndex = 344
+        Me.Money11.Text = "¥20,000"
+        '
+        'Money12
+        '
+        Me.Money12.AutoSize = True
+        Me.Money12.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money12.Location = New System.Drawing.Point(949, 214)
+        Me.Money12.Name = "Money12"
+        Me.Money12.Size = New System.Drawing.Size(119, 33)
+        Me.Money12.TabIndex = 345
+        Me.Money12.Text = "¥50,000"
+        '
+        'Money13
+        '
+        Me.Money13.AutoSize = True
+        Me.Money13.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money13.Location = New System.Drawing.Point(949, 181)
+        Me.Money13.Name = "Money13"
+        Me.Money13.Size = New System.Drawing.Size(135, 33)
+        Me.Money13.TabIndex = 346
+        Me.Money13.Text = "¥100,000"
+        '
+        'Money14
+        '
+        Me.Money14.AutoSize = True
+        Me.Money14.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money14.Location = New System.Drawing.Point(945, 148)
+        Me.Money14.Name = "Money14"
+        Me.Money14.Size = New System.Drawing.Size(135, 33)
+        Me.Money14.TabIndex = 347
+        Me.Money14.Text = "¥250,000"
+        '
+        'Money15
+        '
+        Me.Money15.AutoSize = True
+        Me.Money15.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Money15.Location = New System.Drawing.Point(945, 115)
+        Me.Money15.Name = "Money15"
+        Me.Money15.Size = New System.Drawing.Size(169, 33)
+        Me.Money15.TabIndex = 348
+        Me.Money15.Text = "¥1,000,000"
+        '
+        'Topic15
+        '
+        Me.Topic15.AutoSize = True
+        Me.Topic15.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic15.Location = New System.Drawing.Point(950, 115)
+        Me.Topic15.Name = "Topic15"
+        Me.Topic15.Size = New System.Drawing.Size(118, 33)
+        Me.Topic15.TabIndex = 354
+        Me.Topic15.Text = "Label15"
+        Me.Topic15.Visible = False
+        '
+        'Topic14
+        '
+        Me.Topic14.AutoSize = True
+        Me.Topic14.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic14.Location = New System.Drawing.Point(950, 148)
+        Me.Topic14.Name = "Topic14"
+        Me.Topic14.Size = New System.Drawing.Size(118, 33)
+        Me.Topic14.TabIndex = 353
+        Me.Topic14.Text = "Label14"
+        Me.Topic14.Visible = False
+        '
+        'Topic13
+        '
+        Me.Topic13.AutoSize = True
+        Me.Topic13.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic13.Location = New System.Drawing.Point(950, 181)
+        Me.Topic13.Name = "Topic13"
+        Me.Topic13.Size = New System.Drawing.Size(118, 33)
+        Me.Topic13.TabIndex = 352
+        Me.Topic13.Text = "Label13"
+        Me.Topic13.Visible = False
+        '
+        'Topic01
+        '
+        Me.Topic01.AutoSize = True
+        Me.Topic01.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic01.Location = New System.Drawing.Point(945, 580)
+        Me.Topic01.Name = "Topic01"
+        Me.Topic01.Size = New System.Drawing.Size(102, 33)
+        Me.Topic01.TabIndex = 325
+        Me.Topic01.Text = "Label1"
+        Me.Topic01.Visible = False
+        '
+        'Topic12
+        '
+        Me.Topic12.AutoSize = True
+        Me.Topic12.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic12.Location = New System.Drawing.Point(952, 214)
+        Me.Topic12.Name = "Topic12"
+        Me.Topic12.Size = New System.Drawing.Size(118, 33)
+        Me.Topic12.TabIndex = 336
+        Me.Topic12.Text = "Label12"
+        Me.Topic12.Visible = False
+        '
+        'Topic11
+        '
+        Me.Topic11.AutoSize = True
+        Me.Topic11.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic11.Location = New System.Drawing.Point(951, 247)
+        Me.Topic11.Name = "Topic11"
+        Me.Topic11.Size = New System.Drawing.Size(118, 33)
+        Me.Topic11.TabIndex = 335
+        Me.Topic11.Text = "Label11"
+        Me.Topic11.Visible = False
+        '
+        'Topic10
+        '
+        Me.Topic10.AutoSize = True
+        Me.Topic10.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic10.Location = New System.Drawing.Point(948, 283)
+        Me.Topic10.Name = "Topic10"
+        Me.Topic10.Size = New System.Drawing.Size(118, 33)
+        Me.Topic10.TabIndex = 334
+        Me.Topic10.Text = "Label10"
+        Me.Topic10.Visible = False
+        '
+        'Topic09
+        '
+        Me.Topic09.AutoSize = True
+        Me.Topic09.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic09.Location = New System.Drawing.Point(952, 316)
+        Me.Topic09.Name = "Topic09"
+        Me.Topic09.Size = New System.Drawing.Size(102, 33)
+        Me.Topic09.TabIndex = 333
+        Me.Topic09.Text = "Label9"
+        Me.Topic09.Visible = False
+        '
+        'Topic08
+        '
+        Me.Topic08.AutoSize = True
+        Me.Topic08.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic08.Location = New System.Drawing.Point(950, 349)
+        Me.Topic08.Name = "Topic08"
+        Me.Topic08.Size = New System.Drawing.Size(102, 33)
+        Me.Topic08.TabIndex = 332
+        Me.Topic08.Text = "Label8"
+        Me.Topic08.Visible = False
+        '
+        'Topic07
+        '
+        Me.Topic07.AutoSize = True
+        Me.Topic07.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic07.Location = New System.Drawing.Point(951, 382)
+        Me.Topic07.Name = "Topic07"
+        Me.Topic07.Size = New System.Drawing.Size(102, 33)
+        Me.Topic07.TabIndex = 331
+        Me.Topic07.Text = "Label7"
+        Me.Topic07.Visible = False
+        '
+        'Topic06
+        '
+        Me.Topic06.AutoSize = True
+        Me.Topic06.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic06.Location = New System.Drawing.Point(952, 415)
+        Me.Topic06.Name = "Topic06"
+        Me.Topic06.Size = New System.Drawing.Size(102, 33)
+        Me.Topic06.TabIndex = 330
+        Me.Topic06.Text = "Label6"
+        Me.Topic06.Visible = False
+        '
+        'Topic05
+        '
+        Me.Topic05.AutoSize = True
+        Me.Topic05.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic05.Location = New System.Drawing.Point(952, 448)
+        Me.Topic05.Name = "Topic05"
+        Me.Topic05.Size = New System.Drawing.Size(102, 33)
+        Me.Topic05.TabIndex = 329
+        Me.Topic05.Text = "Label5"
+        Me.Topic05.Visible = False
+        '
+        'Topic04
+        '
+        Me.Topic04.AutoSize = True
+        Me.Topic04.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic04.Location = New System.Drawing.Point(948, 481)
+        Me.Topic04.Name = "Topic04"
+        Me.Topic04.Size = New System.Drawing.Size(102, 33)
+        Me.Topic04.TabIndex = 328
+        Me.Topic04.Text = "Label4"
+        Me.Topic04.Visible = False
+        '
+        'Topic03
+        '
+        Me.Topic03.AutoSize = True
+        Me.Topic03.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic03.Location = New System.Drawing.Point(952, 514)
+        Me.Topic03.Name = "Topic03"
+        Me.Topic03.Size = New System.Drawing.Size(102, 33)
+        Me.Topic03.TabIndex = 327
+        Me.Topic03.Text = "Label3"
+        Me.Topic03.Visible = False
+        '
+        'Topic02
+        '
+        Me.Topic02.AutoSize = True
+        Me.Topic02.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Topic02.Location = New System.Drawing.Point(945, 547)
+        Me.Topic02.Name = "Topic02"
+        Me.Topic02.Size = New System.Drawing.Size(102, 33)
+        Me.Topic02.TabIndex = 326
+        Me.Topic02.Text = "Label2"
+        Me.Topic02.Visible = False
+        '
         'PlayerScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Money01)
+        Me.Controls.Add(Me.Money02)
+        Me.Controls.Add(Me.Money03)
+        Me.Controls.Add(Me.Money04)
+        Me.Controls.Add(Me.Money10)
+        Me.Controls.Add(Me.Money09)
+        Me.Controls.Add(Me.Money08)
+        Me.Controls.Add(Me.Money07)
+        Me.Controls.Add(Me.Money06)
+        Me.Controls.Add(Me.Money05)
+        Me.Controls.Add(Me.Money11)
+        Me.Controls.Add(Me.Money12)
+        Me.Controls.Add(Me.Money13)
+        Me.Controls.Add(Me.Money14)
+        Me.Controls.Add(Me.Money15)
+        Me.Controls.Add(Me.Topic15)
+        Me.Controls.Add(Me.Topic14)
+        Me.Controls.Add(Me.Topic13)
+        Me.Controls.Add(Me.Topic01)
+        Me.Controls.Add(Me.Topic12)
+        Me.Controls.Add(Me.Topic11)
+        Me.Controls.Add(Me.Topic10)
+        Me.Controls.Add(Me.Topic09)
+        Me.Controls.Add(Me.Topic08)
+        Me.Controls.Add(Me.Topic07)
+        Me.Controls.Add(Me.Topic06)
+        Me.Controls.Add(Me.Topic05)
+        Me.Controls.Add(Me.Topic04)
+        Me.Controls.Add(Me.Topic03)
+        Me.Controls.Add(Me.Topic02)
         Me.Controls.Add(Me.PercentD)
         Me.Controls.Add(Me.PercentC)
         Me.Controls.Add(Me.PercentB)
@@ -732,32 +819,8 @@ Partial Class PlayerScreen
         Me.Controls.Add(Me.C)
         Me.Controls.Add(Me.B)
         Me.Controls.Add(Me.A)
-        Me.Controls.Add(Me.Money12)
         Me.Controls.Add(Me.TrustPic)
         Me.Controls.Add(Me.AskFriendPic)
-        Me.Controls.Add(Me.Money11)
-        Me.Controls.Add(Me.Money10)
-        Me.Controls.Add(Me.Money09)
-        Me.Controls.Add(Me.Money08)
-        Me.Controls.Add(Me.Money07)
-        Me.Controls.Add(Me.Money06)
-        Me.Controls.Add(Me.Money05)
-        Me.Controls.Add(Me.Money04)
-        Me.Controls.Add(Me.Money03)
-        Me.Controls.Add(Me.Money02)
-        Me.Controls.Add(Me.Money01)
-        Me.Controls.Add(Me.Topic12)
-        Me.Controls.Add(Me.Topic11)
-        Me.Controls.Add(Me.Topic10)
-        Me.Controls.Add(Me.Topic09)
-        Me.Controls.Add(Me.Topic08)
-        Me.Controls.Add(Me.Topic07)
-        Me.Controls.Add(Me.Topic06)
-        Me.Controls.Add(Me.Topic05)
-        Me.Controls.Add(Me.Topic04)
-        Me.Controls.Add(Me.Topic03)
-        Me.Controls.Add(Me.Topic02)
-        Me.Controls.Add(Me.Topic01)
         Me.Controls.Add(Me.DoubleDipPic)
         Me.Controls.Add(Me.ChoiceD)
         Me.Controls.Add(Me.ChoiceC)
@@ -813,30 +876,6 @@ Partial Class PlayerScreen
     Friend WithEvents ChoiceD As Label
     Friend WithEvents TrustPic As PictureBox
     Friend WithEvents AskFriendPic As PictureBox
-    Friend WithEvents Money12 As Label
-    Friend WithEvents Money11 As Label
-    Friend WithEvents Money10 As Label
-    Friend WithEvents Money09 As Label
-    Friend WithEvents Money08 As Label
-    Friend WithEvents Money07 As Label
-    Friend WithEvents Money06 As Label
-    Friend WithEvents Money05 As Label
-    Friend WithEvents Money04 As Label
-    Friend WithEvents Money03 As Label
-    Friend WithEvents Money02 As Label
-    Friend WithEvents Money01 As Label
-    Friend WithEvents Topic12 As Label
-    Friend WithEvents Topic11 As Label
-    Friend WithEvents Topic10 As Label
-    Friend WithEvents Topic09 As Label
-    Friend WithEvents Topic08 As Label
-    Friend WithEvents Topic07 As Label
-    Friend WithEvents Topic06 As Label
-    Friend WithEvents Topic05 As Label
-    Friend WithEvents Topic04 As Label
-    Friend WithEvents Topic03 As Label
-    Friend WithEvents Topic02 As Label
-    Friend WithEvents Topic01 As Label
     Friend WithEvents PassPic As PictureBox
     Friend WithEvents DoubleDipPic As PictureBox
     Friend WithEvents AskPic As PictureBox
@@ -853,4 +892,34 @@ Partial Class PlayerScreen
     Friend WithEvents PercentB As Label
     Friend WithEvents PercentC As Label
     Friend WithEvents PercentD As Label
+    Friend WithEvents Money01 As Label
+    Friend WithEvents Money02 As Label
+    Friend WithEvents Money03 As Label
+    Friend WithEvents Money04 As Label
+    Friend WithEvents Money10 As Label
+    Friend WithEvents Money09 As Label
+    Friend WithEvents Money08 As Label
+    Friend WithEvents Money07 As Label
+    Friend WithEvents Money06 As Label
+    Friend WithEvents Money05 As Label
+    Friend WithEvents Money11 As Label
+    Friend WithEvents Money12 As Label
+    Friend WithEvents Money13 As Label
+    Friend WithEvents Money14 As Label
+    Friend WithEvents Money15 As Label
+    Friend WithEvents Topic15 As Label
+    Friend WithEvents Topic14 As Label
+    Friend WithEvents Topic13 As Label
+    Friend WithEvents Topic01 As Label
+    Friend WithEvents Topic12 As Label
+    Friend WithEvents Topic11 As Label
+    Friend WithEvents Topic10 As Label
+    Friend WithEvents Topic09 As Label
+    Friend WithEvents Topic08 As Label
+    Friend WithEvents Topic07 As Label
+    Friend WithEvents Topic06 As Label
+    Friend WithEvents Topic05 As Label
+    Friend WithEvents Topic04 As Label
+    Friend WithEvents Topic03 As Label
+    Friend WithEvents Topic02 As Label
 End Class

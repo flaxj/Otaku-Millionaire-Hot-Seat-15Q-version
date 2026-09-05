@@ -1,6 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Q11
-    Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -34,7 +33,6 @@ Partial Class Q11
         Me.Placeholder = New System.Windows.Forms.Label()
         Me.Incorrect = New System.Windows.Forms.Label()
         Me.Correct = New System.Windows.Forms.Label()
-        Me.TenthsClock = New System.Windows.Forms.Timer(Me.components)
         Me.AmountAtRisk = New System.Windows.Forms.Label()
         Me.TopPrizeQuestionRemaining = New System.Windows.Forms.Label()
         Me.TopPrizeAmount = New System.Windows.Forms.Label()
@@ -48,6 +46,7 @@ Partial Class Q11
         Me.Question1 = New System.Windows.Forms.Label()
         Me.SecondsClock = New System.Windows.Forms.Timer(Me.components)
         Me.ChoiceD = New System.Windows.Forms.CheckBox()
+        Me.TenthsClock = New System.Windows.Forms.Timer(Me.components)
         CType(Me.AskPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DoubleDipPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrustPic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +60,7 @@ Partial Class Q11
         Me.AskPic.Name = "AskPic"
         Me.AskPic.Size = New System.Drawing.Size(100, 50)
         Me.AskPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.AskPic.TabIndex = 241
+        Me.AskPic.TabIndex = 195
         Me.AskPic.TabStop = False
         '
         'DoubleDipPic
@@ -71,7 +70,7 @@ Partial Class Q11
         Me.DoubleDipPic.Name = "DoubleDipPic"
         Me.DoubleDipPic.Size = New System.Drawing.Size(100, 50)
         Me.DoubleDipPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.DoubleDipPic.TabIndex = 240
+        Me.DoubleDipPic.TabIndex = 194
         Me.DoubleDipPic.TabStop = False
         '
         'TrustPic
@@ -81,7 +80,7 @@ Partial Class Q11
         Me.TrustPic.Name = "TrustPic"
         Me.TrustPic.Size = New System.Drawing.Size(100, 50)
         Me.TrustPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.TrustPic.TabIndex = 239
+        Me.TrustPic.TabIndex = 193
         Me.TrustPic.TabStop = False
         '
         'AskFriendPic
@@ -91,7 +90,7 @@ Partial Class Q11
         Me.AskFriendPic.Name = "AskFriendPic"
         Me.AskFriendPic.Size = New System.Drawing.Size(100, 50)
         Me.AskFriendPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.AskFriendPic.TabIndex = 238
+        Me.AskFriendPic.TabIndex = 192
         Me.AskFriendPic.TabStop = False
         '
         'PlayersRemaining
@@ -101,7 +100,7 @@ Partial Class Q11
         Me.PlayersRemaining.Location = New System.Drawing.Point(778, 108)
         Me.PlayersRemaining.Name = "PlayersRemaining"
         Me.PlayersRemaining.Size = New System.Drawing.Size(42, 46)
-        Me.PlayersRemaining.TabIndex = 237
+        Me.PlayersRemaining.TabIndex = 191
         Me.PlayersRemaining.Text = "6"
         '
         'Topic
@@ -111,7 +110,7 @@ Partial Class Q11
         Me.Topic.Location = New System.Drawing.Point(40, 205)
         Me.Topic.Name = "Topic"
         Me.Topic.Size = New System.Drawing.Size(119, 46)
-        Me.Topic.TabIndex = 236
+        Me.Topic.TabIndex = 190
         Me.Topic.Text = "Topic"
         '
         'MasterButton
@@ -119,7 +118,7 @@ Partial Class Q11
         Me.MasterButton.Location = New System.Drawing.Point(1025, 131)
         Me.MasterButton.Name = "MasterButton"
         Me.MasterButton.Size = New System.Drawing.Size(183, 73)
-        Me.MasterButton.TabIndex = 235
+        Me.MasterButton.TabIndex = 189
         Me.MasterButton.Text = "Show Question"
         Me.MasterButton.UseVisualStyleBackColor = True
         '
@@ -130,7 +129,7 @@ Partial Class Q11
         Me.Tenths.Location = New System.Drawing.Point(574, 205)
         Me.Tenths.Name = "Tenths"
         Me.Tenths.Size = New System.Drawing.Size(42, 46)
-        Me.Tenths.TabIndex = 234
+        Me.Tenths.TabIndex = 188
         Me.Tenths.Text = "0"
         '
         'Placeholder
@@ -140,7 +139,7 @@ Partial Class Q11
         Me.Placeholder.Location = New System.Drawing.Point(554, 205)
         Me.Placeholder.Name = "Placeholder"
         Me.Placeholder.Size = New System.Drawing.Size(31, 46)
-        Me.Placeholder.TabIndex = 233
+        Me.Placeholder.TabIndex = 187
         Me.Placeholder.Text = "."
         '
         'Incorrect
@@ -151,7 +150,7 @@ Partial Class Q11
         Me.Incorrect.Location = New System.Drawing.Point(722, 108)
         Me.Incorrect.Name = "Incorrect"
         Me.Incorrect.Size = New System.Drawing.Size(30, 46)
-        Me.Incorrect.TabIndex = 232
+        Me.Incorrect.TabIndex = 186
         Me.Incorrect.Text = "I"
         Me.Incorrect.Visible = False
         '
@@ -164,12 +163,9 @@ Partial Class Q11
         Me.Correct.Location = New System.Drawing.Point(643, 108)
         Me.Correct.Name = "Correct"
         Me.Correct.Size = New System.Drawing.Size(49, 46)
-        Me.Correct.TabIndex = 231
+        Me.Correct.TabIndex = 185
         Me.Correct.Text = "C"
         Me.Correct.Visible = False
-        '
-        'TenthsClock
-        '
         '
         'AmountAtRisk
         '
@@ -178,7 +174,7 @@ Partial Class Q11
         Me.AmountAtRisk.Location = New System.Drawing.Point(318, 108)
         Me.AmountAtRisk.Name = "AmountAtRisk"
         Me.AmountAtRisk.Size = New System.Drawing.Size(185, 46)
-        Me.AmountAtRisk.TabIndex = 230
+        Me.AmountAtRisk.TabIndex = 184
         Me.AmountAtRisk.Text = "¥750,000"
         '
         'TopPrizeQuestionRemaining
@@ -188,7 +184,7 @@ Partial Class Q11
         Me.TopPrizeQuestionRemaining.Location = New System.Drawing.Point(643, 41)
         Me.TopPrizeQuestionRemaining.Name = "TopPrizeQuestionRemaining"
         Me.TopPrizeQuestionRemaining.Size = New System.Drawing.Size(64, 46)
-        Me.TopPrizeQuestionRemaining.TabIndex = 229
+        Me.TopPrizeQuestionRemaining.TabIndex = 183
         Me.TopPrizeQuestionRemaining.Text = "12"
         '
         'TopPrizeAmount
@@ -198,7 +194,7 @@ Partial Class Q11
         Me.TopPrizeAmount.Location = New System.Drawing.Point(318, 41)
         Me.TopPrizeAmount.Name = "TopPrizeAmount"
         Me.TopPrizeAmount.Size = New System.Drawing.Size(218, 46)
-        Me.TopPrizeAmount.TabIndex = 228
+        Me.TopPrizeAmount.TabIndex = 182
         Me.TopPrizeAmount.Text = "¥1,000,000"
         '
         'QuestionValue
@@ -208,7 +204,7 @@ Partial Class Q11
         Me.QuestionValue.Location = New System.Drawing.Point(52, 41)
         Me.QuestionValue.Name = "QuestionValue"
         Me.QuestionValue.Size = New System.Drawing.Size(108, 46)
-        Me.QuestionValue.TabIndex = 227
+        Me.QuestionValue.TabIndex = 181
         Me.QuestionValue.Text = "¥500"
         '
         'Seconds
@@ -218,7 +214,7 @@ Partial Class Q11
         Me.Seconds.Location = New System.Drawing.Point(504, 205)
         Me.Seconds.Name = "Seconds"
         Me.Seconds.Size = New System.Drawing.Size(64, 46)
-        Me.Seconds.TabIndex = 226
+        Me.Seconds.TabIndex = 180
         Me.Seconds.Text = "45"
         '
         'ChoiceC
@@ -228,7 +224,7 @@ Partial Class Q11
         Me.ChoiceC.Location = New System.Drawing.Point(48, 589)
         Me.ChoiceC.Name = "ChoiceC"
         Me.ChoiceC.Size = New System.Drawing.Size(194, 50)
-        Me.ChoiceC.TabIndex = 224
+        Me.ChoiceC.TabIndex = 178
         Me.ChoiceC.Text = "ChoiceC"
         Me.ChoiceC.UseVisualStyleBackColor = True
         Me.ChoiceC.Visible = False
@@ -240,7 +236,7 @@ Partial Class Q11
         Me.ChoiceB.Location = New System.Drawing.Point(690, 501)
         Me.ChoiceB.Name = "ChoiceB"
         Me.ChoiceB.Size = New System.Drawing.Size(192, 50)
-        Me.ChoiceB.TabIndex = 223
+        Me.ChoiceB.TabIndex = 177
         Me.ChoiceB.Text = "ChoiceB"
         Me.ChoiceB.UseVisualStyleBackColor = True
         Me.ChoiceB.Visible = False
@@ -252,7 +248,7 @@ Partial Class Q11
         Me.ChoiceA.Location = New System.Drawing.Point(48, 501)
         Me.ChoiceA.Name = "ChoiceA"
         Me.ChoiceA.Size = New System.Drawing.Size(192, 50)
-        Me.ChoiceA.TabIndex = 222
+        Me.ChoiceA.TabIndex = 176
         Me.ChoiceA.Text = "ChoiceA"
         Me.ChoiceA.UseVisualStyleBackColor = True
         Me.ChoiceA.Visible = False
@@ -264,7 +260,7 @@ Partial Class Q11
         Me.Question3.Location = New System.Drawing.Point(81, 410)
         Me.Question3.Name = "Question3"
         Me.Question3.Size = New System.Drawing.Size(202, 46)
-        Me.Question3.TabIndex = 221
+        Me.Question3.TabIndex = 175
         Me.Question3.Text = "Question3"
         Me.Question3.Visible = False
         '
@@ -275,7 +271,7 @@ Partial Class Q11
         Me.Question2.Location = New System.Drawing.Point(81, 364)
         Me.Question2.Name = "Question2"
         Me.Question2.Size = New System.Drawing.Size(202, 46)
-        Me.Question2.TabIndex = 220
+        Me.Question2.TabIndex = 174
         Me.Question2.Text = "Question2"
         Me.Question2.Visible = False
         '
@@ -286,7 +282,7 @@ Partial Class Q11
         Me.Question1.Location = New System.Drawing.Point(81, 318)
         Me.Question1.Name = "Question1"
         Me.Question1.Size = New System.Drawing.Size(202, 46)
-        Me.Question1.TabIndex = 219
+        Me.Question1.TabIndex = 173
         Me.Question1.Text = "Question1"
         Me.Question1.Visible = False
         '
@@ -301,7 +297,7 @@ Partial Class Q11
         Me.ChoiceD.Location = New System.Drawing.Point(690, 589)
         Me.ChoiceD.Name = "ChoiceD"
         Me.ChoiceD.Size = New System.Drawing.Size(194, 50)
-        Me.ChoiceD.TabIndex = 225
+        Me.ChoiceD.TabIndex = 179
         Me.ChoiceD.Text = "ChoiceD"
         Me.ChoiceD.UseVisualStyleBackColor = True
         Me.ChoiceD.Visible = False
@@ -359,7 +355,6 @@ Partial Class Q11
     Friend WithEvents Placeholder As Label
     Friend WithEvents Incorrect As Label
     Friend WithEvents Correct As Label
-    Friend WithEvents TenthsClock As Timer
     Friend WithEvents AmountAtRisk As Label
     Friend WithEvents TopPrizeQuestionRemaining As Label
     Friend WithEvents TopPrizeAmount As Label
@@ -373,4 +368,5 @@ Partial Class Q11
     Friend WithEvents Question1 As Label
     Friend WithEvents SecondsClock As Timer
     Friend WithEvents ChoiceD As CheckBox
+    Friend WithEvents TenthsClock As Timer
 End Class

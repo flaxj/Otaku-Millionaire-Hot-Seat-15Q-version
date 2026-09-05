@@ -148,7 +148,7 @@ Partial Class Q07
         Me.SafeHavenQuestionsRemaining.Name = "SafeHavenQuestionsRemaining"
         Me.SafeHavenQuestionsRemaining.Size = New System.Drawing.Size(42, 46)
         Me.SafeHavenQuestionsRemaining.TabIndex = 140
-        Me.SafeHavenQuestionsRemaining.Text = "2"
+        Me.SafeHavenQuestionsRemaining.Text = "5"
         '
         'TopPrizeQuestionRemaining
         '

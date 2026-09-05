@@ -1,4 +1,6 @@
-﻿Public Class Q07
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public Class Q07
     Friend Q7GamePlay(13) As String 'declare gameplay as string
     Friend GPlayersRemaining As Integer 'declare playersRemaining as Integer
     Friend GPlayerNumber As Integer 'declare GPlayerNumber as Integer
@@ -33,8 +35,6 @@
         TopPrizeAmount.Text = Q06.TopPrizeAmount.Text
         Trust = Q06.Trust
 
-        Winnings.question = 7
-
         'perform question loading and reset clock
         PlayerScreen.Seconds.Text = CStr(30)
         PlayerScreen.Tenths.Text = CStr(0)
@@ -45,7 +45,7 @@
             My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
 
             'set QuestionValue to Question 7 Value
-            QuestionValue.Text = "¥10,000"
+            QuestionValue.Text = "¥2,500"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
@@ -53,8 +53,13 @@
             'hide the SHQuestionRemaining
             SafeHavenQuestionsRemaining.Visible = False
         ElseIf GPlayersRemaining = 5 Then
-            'play the question Transiton Music
-            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+            If Q03.QuestionValue.Text = "¥1,000" Then
+                'play the transition music
+                My.Computer.Audio.Play(My.Resources.LevelTransitionMusic, AudioPlayMode.Background)
+            Else
+                'play the question Transiton Music
+                My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+            End If
 
             'set new risk value to ¥150,000
             AmountAtRisk.Text = "¥150,000"
@@ -63,7 +68,7 @@
             SafeHavenQuestionsRemaining.Visible = False
 
             'set the value to question 6
-            QuestionValue.Text = "¥6,000"
+            QuestionValue.Text = "¥1,500"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
@@ -74,11 +79,8 @@
             'set new risk value to ¥50,000
             AmountAtRisk.Text = "¥50,000"
 
-            'hide the SHQuestionRemaining
-            SafeHavenQuestionsRemaining.Visible = False
-
             'set the value to question 5
-            QuestionValue.Text = "¥4,000"
+            QuestionValue.Text = "¥1,000"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
@@ -89,31 +91,20 @@
             'set new risk value to ¥30,000
             AmountAtRisk.Text = "¥30,000"
 
-            'hide the SHQuestionRemaining
-            SafeHavenQuestionsRemaining.Visible = False
-
             'set the value to question 4
-            QuestionValue.Text = "¥2,500"
+            QuestionValue.Text = "¥500"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
         ElseIf GPlayersRemaining = 2 Then
-            If Q06.QuestionValue.Text = "¥1,000" Then
-                'play the transition music
-                My.Computer.Audio.Play(My.Resources.LevelTransitionMusic, AudioPlayMode.Background)
-            Else
-                'play the question Transiton Music
-                My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
-            End If
+            'play the question Transiton Music
+            My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
 
-            'set new risk value to ¥10,000
-            AmountAtRisk.Text = "¥10,000"
-
-            'hide the SHQuestionRemaining
-            SafeHavenQuestionsRemaining.Visible = False
+            'set new risk value to ¥30,000
+            AmountAtRisk.Text = "¥30,000"
 
             'set the value to question 3
-            QuestionValue.Text = "¥1,500"
+            QuestionValue.Text = "¥300"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
@@ -121,11 +112,11 @@
             'play the question Transiton Music
             My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
 
-            'set new risk value to ¥10,000
-            AmountAtRisk.Text = "¥10,000"
+            'set new risk value to ¥30,000
+            AmountAtRisk.Text = "¥30,000"
 
-            'set questionValue to Question 2 Value
-            QuestionValue.Text = "¥1,000"
+            'set the value to question 2
+            QuestionValue.Text = "¥200"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
@@ -311,17 +302,9 @@
 
                         'play the ¥1,000 Music
                         My.Computer.Audio.Play(My.Resources.OneThousandYenWon, AudioPlayMode.Background)
-
-                        'set new risk value to ¥9,000
-                        AmountAtRisk.Text = "¥9,000"
                     Else
-                        If GPlayersRemaining = 6 Then
-                            'play Question 7 Correct Answer
-                            My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
-                        Else
-                            'play Question 6 Correct Answer
-                            My.Computer.Audio.Play(My.Resources.Question6Correct, AudioPlayMode.Background)
-                        End If
+                        'play Question 7 Correct Answer
+                        My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
                     End If
 
                     If passUsage < GPlayersRemaining Then
@@ -352,7 +335,7 @@
                         PlayerScreen.TrustPic.Visible = False
                     End If
                 Else
-                    'play Question 10 Incorrect
+                    'play Question 7 Incorrect
                     My.Computer.Audio.Play(My.Resources.Question7Wrong, AudioPlayMode.Background)
 
                     'take one from GPlayersRemaining
@@ -363,68 +346,41 @@
                     PlayersRemaining.Text = CStr(GPlayersRemaining)
                 End If
             Case 3
+                'reset questions
+                PlayerScreen.ResetQuestionArea()
+
                 'check if incorrect is visible
                 If Incorrect.Visible = True Or choice <> answer Then
                     If GPlayersRemaining = 5 Then
-                        'reset questions
-                        PlayerScreen.ResetQuestionArea()
-
-                        'play the next player in
-                        My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
-
                         'set top prize amount
                         TopPrizeAmount.Text = "¥250,000"
 
                         'set new risk value to ¥150,000
                         AmountAtRisk.Text = "¥150,000"
                     ElseIf GPlayersRemaining = 4 Then
-                        'reset questions
-                        PlayerScreen.ResetQuestionArea()
-
-                        'play the next player in
-                        My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
-
                         'set top prize amount
                         TopPrizeAmount.Text = "¥100,000"
 
                         'set new risk value to ¥50,000
                         AmountAtRisk.Text = "¥50,000"
                     ElseIf GPlayersRemaining = 3 Then
-                        'reset questions
-                        PlayerScreen.ResetQuestionArea()
-
-                        'play the next player in
-                        My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
-
                         'set top prize amount
                         TopPrizeAmount.Text = "¥50,000"
 
                         'set new risk value to ¥30,000
                         AmountAtRisk.Text = "¥30,000"
                     ElseIf GPlayersRemaining = 2 Then
-                        'reset questions
-                        PlayerScreen.ResetQuestionArea()
-
-                        'play the next player in
-                        My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
-
                         'set top prize amount
                         TopPrizeAmount.Text = "¥20,000"
 
                         'set new risk value to ¥10,000
                         AmountAtRisk.Text = "¥10,000"
                     ElseIf GPlayersRemaining = 1 Then
-                        'reset questions
-                        PlayerScreen.ResetQuestionArea()
-
-                        'play the next player in
-                        My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
-
                         'set top prize amount
                         TopPrizeAmount.Text = "¥10,000"
 
-                        'set new risk value to ¥9,000
-                        AmountAtRisk.Text = "¥9,000"
+                        'set new risk value to ¥10,000
+                        AmountAtRisk.Text = "¥10,000"
                     Else
                         'show the final picture and winnings on player screen
                         PlayerScreen.EndShowLogo.Visible = True
@@ -436,12 +392,15 @@
                         'show Winnings window
                         Winnings.Show()
 
-                        'close Question 7 Window
+                        'close Question 10 Window
                         Close()
 
                         'exit sub
                         Exit Sub
                     End If
+
+                    'play the next player in
+                    My.Computer.Audio.Play(My.Resources.Next_Player_In, AudioPlayMode.Background)
 
                     If passUsage < GPlayersRemaining Then
                         'show the pass Lifeline Picture
@@ -471,27 +430,20 @@
                         PlayerScreen.TrustPic.Visible = False
                     End If
                 Else
-                    'level window
-                    PlayerScreen.LevelWindow()
-
                     'reset questions
                     PlayerScreen.ResetQuestionArea()
 
-                    'played three bongs
-                    My.Computer.Audio.Play(My.Resources.Three_Beeps, AudioPlayMode.WaitToComplete)
-
-                    'open the seventh question
-                    Level3MoneyTree.Show()
+                    'open the eighth question
+                    Q08.Show()
                 End If
             Case 4
-                'level window
-                PlayerScreen.LevelWindow()
+                'open the eighth question
+                Q08.Show()
 
-                'played three bongs
-                My.Computer.Audio.Play(My.Resources.Three_Beeps, AudioPlayMode.WaitToComplete)
-
-                'open the Level 3 Money Tree
-                Level3MoneyTree.Show()
+                If GPlayersRemaining = 4 Then
+                    'play the question Transiton Music
+                    My.Computer.Audio.Play(My.Resources.QuestionTransitionMusic, AudioPlayMode.Background)
+                End If
         End Select
 
         'add one to ButtonCount
@@ -649,7 +601,7 @@
         If choice = answer Then
             'show the correct label
             Correct.Visible = True
-            Else
+        Else
             'show the incorrect label
             Incorrect.Visible = True
 
@@ -732,8 +684,8 @@
                 PlayerScreen.Money07.ForeColor = Color.White
             ElseIf GPlayersRemaining = 5 Then
                 'enable the money tree result
-                PlayerScreen.Money06.BackColor = Color.Green
-                PlayerScreen.Money06.ForeColor = Color.White
+                PlayerScreen.Money07.BackColor = Color.Green
+                PlayerScreen.Money07.ForeColor = Color.White
             ElseIf GPlayersRemaining = 4 Then
                 'enable the money tree result
                 PlayerScreen.Money05.BackColor = Color.Green
@@ -855,17 +807,9 @@
 
                         'play the ¥1,000 Music
                         My.Computer.Audio.Play(My.Resources.OneThousandYenWon, AudioPlayMode.Background)
-
-                        'set new risk value to ¥9,000
-                        AmountAtRisk.Text = "¥9,000"
                     Else
-                        If GPlayersRemaining = 6 Then
-                            'play Question 7 Correct Answer
-                            My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
-                        Else
-                            'play Question 6 Correct Answer
-                            My.Computer.Audio.Play(My.Resources.Question6Correct, AudioPlayMode.Background)
-                        End If
+                        'play Question 7 Correct Answer
+                        My.Computer.Audio.Play(My.Resources.Question7Correct, AudioPlayMode.Background)
                     End If
 
                     If passUsage < GPlayersRemaining Then
@@ -948,9 +892,9 @@
 
         'check for the apporate music for the clock
         If TimeSeconds = 30 Then
-            My.Computer.Audio.Play(My.Resources.Question6, AudioPlayMode.Background)
+            My.Computer.Audio.Play(My.Resources.Question7, AudioPlayMode.Background)
         Else
-            My.Computer.Audio.Play(My.Resources.Question6_15, AudioPlayMode.Background)
+            My.Computer.Audio.Play(My.Resources.Question7_15, AudioPlayMode.Background)
         End If
     End Sub
 

@@ -1,13 +1,13 @@
 ﻿Public Class Level2MoneyTree
-    Friend subjects(12) As String 'declare the string array
+    Friend subjects(15) As String 'declare the string array
     Friend GPlayersRemaining As Integer 'declare playersRemaining as Integer
     Friend passUsage As Integer 'declare passUsage as Integer
     Dim count As Integer 'set count as Integer
 
     Private Sub Level2MoneyTree_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'transfer Friend Varables from Question 2
-        GPlayersRemaining = Q02.GPlayersRemaining
-        passUsage = Q02.passUsage
+        'transfer Friend Varables from Question 5
+        GPlayersRemaining = Q05.GPlayersRemaining
+        passUsage = Q05.passUsage
 
         'perform loadtopics
         Loadtopics()
@@ -15,8 +15,8 @@
         'show money Tree
         Values()
 
-        'hide Question 2
-        Q02.Hide()
+        'hide Question 5
+        Q05.Hide()
     End Sub
 
     Sub Loadtopics()
@@ -33,6 +33,9 @@
         Topic10.Text = subjects(9)
         Topic11.Text = subjects(10)
         Topic12.Text = subjects(11)
+        Topic13.Text = subjects(12)
+        Topic14.Text = subjects(13)
+        Topic15.Text = subjects(14)
     End Sub
 
     Private Sub ShowMoneyTree_Click(sender As Object, e As EventArgs) Handles ShowMoneyTree.Click
@@ -78,6 +81,9 @@
         Money10.Visible = True
         Money11.Visible = True
         Money12.Visible = True
+        Money13.Visible = True
+        Money14.Visible = True
+        Money15.Visible = True
 
         'show money Tree on PlayerScreen
         PlayerScreen.Values()
@@ -88,13 +94,109 @@
             Money01.ForeColor = Color.White
             Money02.BackColor = Color.Green
             Money02.ForeColor = Color.White
+            Money03.BackColor = Color.Green
+            Money03.ForeColor = Color.White
+            Money04.BackColor = Color.Green
+            Money04.ForeColor = Color.White
+            Money05.BackColor = Color.Green
+            Money05.ForeColor = Color.White
             PlayerScreen.Money01.BackColor = Color.Green
             PlayerScreen.Money01.ForeColor = Color.White
             PlayerScreen.Money02.BackColor = Color.Green
             PlayerScreen.Money02.ForeColor = Color.White
+            PlayerScreen.Money03.BackColor = Color.Green
+            PlayerScreen.Money03.ForeColor = Color.White
+            PlayerScreen.Money04.BackColor = Color.Green
+            PlayerScreen.Money04.ForeColor = Color.White
+            PlayerScreen.Money05.BackColor = Color.Green
+            PlayerScreen.Money05.ForeColor = Color.White
         ElseIf GPlayersRemaining = 5 Then
             'hide the Million
+            Money15.Visible = False
+            PlayerScreen.Money15.Visible = False
+
+            'final question color
+            Money14.BackColor = Color.Gold
+            PlayerScreen.Money14.BackColor = Color.Gold
+            Money14.ForeColor = Color.White
+            PlayerScreen.Money14.ForeColor = Color.White
+
+            'Green the correct answers
+            Money01.BackColor = Color.Green
+            Money01.ForeColor = Color.White
+            Money02.BackColor = Color.Green
+            Money02.ForeColor = Color.White
+            Money03.BackColor = Color.Green
+            Money03.ForeColor = Color.White
+            Money04.BackColor = Color.Green
+            Money04.ForeColor = Color.White
+            PlayerScreen.Money01.BackColor = Color.Green
+            PlayerScreen.Money01.ForeColor = Color.White
+            PlayerScreen.Money02.BackColor = Color.Green
+            PlayerScreen.Money02.ForeColor = Color.White
+            PlayerScreen.Money03.BackColor = Color.Green
+            PlayerScreen.Money03.ForeColor = Color.White
+            PlayerScreen.Money04.BackColor = Color.Green
+            PlayerScreen.Money04.ForeColor = Color.White
+        ElseIf GPlayersRemaining = 4 Then
+            'hide the Million and ¥250,000
+            Money15.Visible = False
+            Money14.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+
+            'final question color
+            Money13.BackColor = Color.Gold
+            PlayerScreen.Money13.BackColor = Color.Gold
+            Money13.ForeColor = Color.White
+            PlayerScreen.Money13.ForeColor = Color.White
+
+            'Green the correct answers
+            Money01.BackColor = Color.Green
+            Money01.ForeColor = Color.White
+            Money02.BackColor = Color.Green
+            Money02.ForeColor = Color.White
+            Money03.BackColor = Color.Green
+            Money03.ForeColor = Color.White
+            PlayerScreen.Money01.BackColor = Color.Green
+            PlayerScreen.Money01.ForeColor = Color.White
+            PlayerScreen.Money02.BackColor = Color.Green
+            PlayerScreen.Money02.ForeColor = Color.White
+            PlayerScreen.Money03.BackColor = Color.Green
+            PlayerScreen.Money03.ForeColor = Color.White
+        ElseIf GPlayersRemaining = 3 Then
+            'hide the Million, ¥250,000, and ¥100,000
+            Money15.Visible = False
+            Money14.Visible = False
+            Money13.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+            PlayerScreen.Money13.Visible = False
+
+            'final question color
+            Money12.BackColor = Color.Gold
+            PlayerScreen.Money12.BackColor = Color.Gold
+            Money12.ForeColor = Color.White
+            PlayerScreen.Money12.ForeColor = Color.White
+
+            'Green the correct answers
+            Money01.BackColor = Color.Green
+            Money01.ForeColor = Color.White
+            Money02.BackColor = Color.Green
+            Money02.ForeColor = Color.White
+            PlayerScreen.Money01.BackColor = Color.Green
+            PlayerScreen.Money01.ForeColor = Color.White
+            PlayerScreen.Money02.BackColor = Color.Green
+            PlayerScreen.Money02.ForeColor = Color.White
+        ElseIf GPlayersRemaining = 2 Then
+            'hide the Million, ¥250,000, ¥100,000, and ¥50,000
+            Money15.Visible = False
+            Money14.Visible = False
+            Money13.Visible = False
             Money12.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+            PlayerScreen.Money13.Visible = False
             PlayerScreen.Money12.Visible = False
 
             'final question color
@@ -108,10 +210,16 @@
             Money01.ForeColor = Color.White
             PlayerScreen.Money01.BackColor = Color.Green
             PlayerScreen.Money01.ForeColor = Color.White
-        Else
-            'hide the Million and ¥250,000
+        ElseIf GPlayersRemaining = 1 Then
+            'hide the Million, ¥250,000, ¥100,000, ¥50,000, and ¥20,000
+            Money15.Visible = False
+            Money14.Visible = False
+            Money13.Visible = False
             Money12.Visible = False
             Money11.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+            PlayerScreen.Money13.Visible = False
             PlayerScreen.Money12.Visible = False
             PlayerScreen.Money11.Visible = False
 
@@ -140,6 +248,9 @@
         Topic10.Visible = True
         Topic11.Visible = True
         Topic12.Visible = True
+        Topic13.Visible = True
+        Topic14.Visible = True
+        Topic15.Visible = True
     End Sub
 
     Public Sub HideValue()
@@ -156,6 +267,9 @@
         Money10.Visible = False
         Money11.Visible = False
         Money12.Visible = False
+        Money13.Visible = False
+        Money14.Visible = False
+        Money15.Visible = False
     End Sub
 
     Public Sub HideTopics()
@@ -172,6 +286,9 @@
         Topic10.Visible = False
         Topic11.Visible = False
         Topic12.Visible = False
+        Topic13.Visible = False
+        Topic14.Visible = False
+        Topic15.Visible = False
     End Sub
 
     Private Sub Transition_Click(sender As Object, e As EventArgs) Handles Transition.Click
@@ -215,8 +332,8 @@
         'start the game on the player side
         PlayerScreen.StartandResumeGame()
 
-        'open Question 3
-        Q03.Show()
+        'open Question 6
+        Q06.Show()
 
         'close the Double Dip Details
         Hide()

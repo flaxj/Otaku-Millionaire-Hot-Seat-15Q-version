@@ -1,5 +1,5 @@
 ﻿Public Class Level3MoneyTree
-    Friend subjects(12) As String 'declare the string array
+    Friend subjects(15) As String 'declare the string array
     Friend GPlayersRemaining As Integer 'declare playersRemaining as Integer
     Friend passUsage As Integer 'declare passUsage as Integer
     Friend AskFriendCount As Integer 'declare AskFriendCount as Integer
@@ -10,11 +10,11 @@
 
     Private Sub Level3MoneyTree_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'transfer Friend Varables from Question 10
-        GPlayersRemaining = Q07.GPlayersRemaining
-        passUsage = Q07.passUsage
-        AskFriendCount = Q07.AskFriendCount
-        DoubleDipCount = Q07.DoubleDipCount
-        trust = Q07.Trust
+        GPlayersRemaining = Q10.GPlayersRemaining
+        passUsage = Q10.passUsage
+        AskFriendCount = Q10.AskFriendCount
+        DoubleDipCount = Q10.DoubleDipCount
+        trust = Q10.Trust
 
         'perform loadtopics
         Loadtopics()
@@ -28,8 +28,8 @@
         'play a loop of the Battle Royle music
         My.Computer.Audio.Play(My.Resources.Battle_Royle_Intro, AudioPlayMode.BackgroundLoop)
 
-        'hide Question 7
-        Q07.Hide()
+        'hide Question 10
+        Q10.Hide()
     End Sub
 
     Sub Loadtopics()
@@ -46,6 +46,9 @@
         Topic10.Text = subjects(9)
         Topic11.Text = subjects(10)
         Topic12.Text = subjects(11)
+        Topic13.Text = subjects(12)
+        Topic14.Text = subjects(13)
+        Topic15.Text = subjects(14)
     End Sub
 
     Sub LifelineUsed()
@@ -117,11 +120,164 @@
         Money10.Visible = True
         Money11.Visible = True
         Money12.Visible = True
+        Money13.Visible = True
+        Money14.Visible = True
+        Money15.Visible = True
 
         'show money Tree on PlayerScreen
         PlayerScreen.Values()
 
         If GPlayersRemaining = 6 Then
+            'Green the correct answers
+            Money01.BackColor = Color.Green
+            Money01.ForeColor = Color.White
+            Money02.BackColor = Color.Green
+            Money02.ForeColor = Color.White
+            Money03.BackColor = Color.Green
+            Money03.ForeColor = Color.White
+            Money04.BackColor = Color.Green
+            Money04.ForeColor = Color.White
+            Money05.BackColor = Color.Green
+            Money05.ForeColor = Color.White
+            Money06.BackColor = Color.Green
+            Money06.ForeColor = Color.White
+            Money07.BackColor = Color.Green
+            Money07.ForeColor = Color.White
+            Money08.BackColor = Color.Green
+            Money08.ForeColor = Color.White
+            Money09.BackColor = Color.Green
+            Money09.ForeColor = Color.White
+            Money10.BackColor = Color.Green
+            Money10.ForeColor = Color.White
+            PlayerScreen.Money01.BackColor = Color.Green
+            PlayerScreen.Money01.ForeColor = Color.White
+            PlayerScreen.Money02.BackColor = Color.Green
+            PlayerScreen.Money02.ForeColor = Color.White
+            PlayerScreen.Money03.BackColor = Color.Green
+            PlayerScreen.Money03.ForeColor = Color.White
+            PlayerScreen.Money04.BackColor = Color.Green
+            PlayerScreen.Money04.ForeColor = Color.White
+            PlayerScreen.Money05.BackColor = Color.Green
+            PlayerScreen.Money05.ForeColor = Color.White
+            PlayerScreen.Money06.BackColor = Color.Green
+            PlayerScreen.Money06.ForeColor = Color.White
+            PlayerScreen.Money07.BackColor = Color.Green
+            PlayerScreen.Money07.ForeColor = Color.White
+            PlayerScreen.Money08.BackColor = Color.Green
+            PlayerScreen.Money08.ForeColor = Color.White
+            PlayerScreen.Money09.BackColor = Color.Green
+            PlayerScreen.Money09.ForeColor = Color.White
+            PlayerScreen.Money10.BackColor = Color.Green
+            PlayerScreen.Money10.ForeColor = Color.White
+        ElseIf GPlayersRemaining = 5 Then
+            'hide the Million
+            Money15.Visible = False
+            PlayerScreen.Money15.Visible = False
+
+            'final question color
+            Money14.BackColor = Color.Gold
+            PlayerScreen.Money14.BackColor = Color.Gold
+            Money14.ForeColor = Color.White
+            PlayerScreen.Money14.ForeColor = Color.White
+
+            'Green the correct answers
+            Money01.BackColor = Color.Green
+            Money01.ForeColor = Color.White
+            Money02.BackColor = Color.Green
+            Money02.ForeColor = Color.White
+            Money03.BackColor = Color.Green
+            Money03.ForeColor = Color.White
+            Money04.BackColor = Color.Green
+            Money04.ForeColor = Color.White
+            Money05.BackColor = Color.Green
+            Money05.ForeColor = Color.White
+            Money06.BackColor = Color.Green
+            Money06.ForeColor = Color.White
+            Money07.BackColor = Color.Green
+            Money07.ForeColor = Color.White
+            Money08.BackColor = Color.Green
+            Money08.ForeColor = Color.White
+            Money09.BackColor = Color.Green
+            Money09.ForeColor = Color.White
+            PlayerScreen.Money01.BackColor = Color.Green
+            PlayerScreen.Money01.ForeColor = Color.White
+            PlayerScreen.Money02.BackColor = Color.Green
+            PlayerScreen.Money02.ForeColor = Color.White
+            PlayerScreen.Money03.BackColor = Color.Green
+            PlayerScreen.Money03.ForeColor = Color.White
+            PlayerScreen.Money04.BackColor = Color.Green
+            PlayerScreen.Money04.ForeColor = Color.White
+            PlayerScreen.Money05.BackColor = Color.Green
+            PlayerScreen.Money05.ForeColor = Color.White
+            PlayerScreen.Money06.BackColor = Color.Green
+            PlayerScreen.Money06.ForeColor = Color.White
+            PlayerScreen.Money07.BackColor = Color.Green
+            PlayerScreen.Money07.ForeColor = Color.White
+            PlayerScreen.Money08.BackColor = Color.Green
+            PlayerScreen.Money08.ForeColor = Color.White
+            PlayerScreen.Money09.BackColor = Color.Green
+            PlayerScreen.Money09.ForeColor = Color.White
+        ElseIf GPlayersRemaining = 4 Then
+            'hide the Million and ¥250,000
+            Money15.Visible = False
+            Money14.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+
+            'final question color
+            Money13.BackColor = Color.Gold
+            PlayerScreen.Money13.BackColor = Color.Gold
+            Money13.ForeColor = Color.White
+            PlayerScreen.Money13.ForeColor = Color.White
+
+            'Green the correct answers
+            Money01.BackColor = Color.Green
+            Money01.ForeColor = Color.White
+            Money02.BackColor = Color.Green
+            Money02.ForeColor = Color.White
+            Money03.BackColor = Color.Green
+            Money03.ForeColor = Color.White
+            Money04.BackColor = Color.Green
+            Money04.ForeColor = Color.White
+            Money05.BackColor = Color.Green
+            Money05.ForeColor = Color.White
+            Money06.BackColor = Color.Green
+            Money06.ForeColor = Color.White
+            Money07.BackColor = Color.Green
+            Money07.ForeColor = Color.White
+            Money08.BackColor = Color.Green
+            Money08.ForeColor = Color.White
+            PlayerScreen.Money01.BackColor = Color.Green
+            PlayerScreen.Money01.ForeColor = Color.White
+            PlayerScreen.Money02.BackColor = Color.Green
+            PlayerScreen.Money02.ForeColor = Color.White
+            PlayerScreen.Money03.BackColor = Color.Green
+            PlayerScreen.Money03.ForeColor = Color.White
+            PlayerScreen.Money04.BackColor = Color.Green
+            PlayerScreen.Money04.ForeColor = Color.White
+            PlayerScreen.Money05.BackColor = Color.Green
+            PlayerScreen.Money05.ForeColor = Color.White
+            PlayerScreen.Money06.BackColor = Color.Green
+            PlayerScreen.Money06.ForeColor = Color.White
+            PlayerScreen.Money07.BackColor = Color.Green
+            PlayerScreen.Money07.ForeColor = Color.White
+            PlayerScreen.Money08.BackColor = Color.Green
+            PlayerScreen.Money08.ForeColor = Color.White
+        ElseIf GPlayersRemaining = 3 Then
+            'hide the Million, ¥250,000, and ¥100,000
+            Money15.Visible = False
+            Money14.Visible = False
+            Money13.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+            PlayerScreen.Money13.Visible = False
+
+            'final question color
+            Money12.BackColor = Color.Gold
+            PlayerScreen.Money12.BackColor = Color.Gold
+            Money12.ForeColor = Color.White
+            PlayerScreen.Money12.ForeColor = Color.White
+
             'Green the correct answers
             Money01.BackColor = Color.Green
             Money01.ForeColor = Color.White
@@ -151,9 +307,15 @@
             PlayerScreen.Money06.ForeColor = Color.White
             PlayerScreen.Money07.BackColor = Color.Green
             PlayerScreen.Money07.ForeColor = Color.White
-        ElseIf GPlayersRemaining = 5 Then
-            'hide the Million
+        ElseIf GPlayersRemaining = 2 Then
+            'hide the Million, ¥250,000, ¥100,000, and ¥50,000
+            Money15.Visible = False
+            Money14.Visible = False
+            Money13.Visible = False
             Money12.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+            PlayerScreen.Money13.Visible = False
             PlayerScreen.Money12.Visible = False
 
             'final question color
@@ -187,10 +349,16 @@
             PlayerScreen.Money05.ForeColor = Color.White
             PlayerScreen.Money06.BackColor = Color.Green
             PlayerScreen.Money06.ForeColor = Color.White
-        ElseIf GPlayersRemaining = 4 Then
-            'hide the Million and ¥250,000
+        ElseIf GPlayersRemaining = 1 Then
+            'hide the Million, ¥250,000, ¥100,000, ¥50,000, and ¥20,000
+            Money15.Visible = False
+            Money14.Visible = False
+            Money13.Visible = False
             Money12.Visible = False
             Money11.Visible = False
+            PlayerScreen.Money15.Visible = False
+            PlayerScreen.Money14.Visible = False
+            PlayerScreen.Money13.Visible = False
             PlayerScreen.Money12.Visible = False
             PlayerScreen.Money11.Visible = False
 
@@ -221,95 +389,6 @@
             PlayerScreen.Money04.ForeColor = Color.White
             PlayerScreen.Money05.BackColor = Color.Green
             PlayerScreen.Money05.ForeColor = Color.White
-        ElseIf GPlayersRemaining = 3 Then
-            'hide the Million, ¥250,000, and ¥100,000
-            Money12.Visible = False
-            Money11.Visible = False
-            Money10.Visible = False
-            PlayerScreen.Money12.Visible = False
-            PlayerScreen.Money11.Visible = False
-            PlayerScreen.Money10.Visible = False
-
-            'final question color
-            Money09.BackColor = Color.Gold
-            PlayerScreen.Money09.BackColor = Color.Gold
-            Money09.ForeColor = Color.White
-            PlayerScreen.Money09.ForeColor = Color.White
-
-            'Green the correct answers
-            Money01.ForeColor = Color.White
-            Money02.BackColor = Color.Green
-            Money02.ForeColor = Color.White
-            Money03.BackColor = Color.Green
-            Money03.ForeColor = Color.White
-            Money04.BackColor = Color.Green
-            Money04.ForeColor = Color.White
-            PlayerScreen.Money01.BackColor = Color.Green
-            PlayerScreen.Money01.ForeColor = Color.White
-            PlayerScreen.Money02.BackColor = Color.Green
-            PlayerScreen.Money02.ForeColor = Color.White
-            PlayerScreen.Money03.BackColor = Color.Green
-            PlayerScreen.Money03.ForeColor = Color.White
-            PlayerScreen.Money04.BackColor = Color.Green
-            PlayerScreen.Money04.ForeColor = Color.White
-        ElseIf GPlayersRemaining = 2 Then
-            'hide the Million, ¥250,000, ¥100,000, and ¥50,000
-            Money12.Visible = False
-            Money11.Visible = False
-            Money10.Visible = False
-            Money09.Visible = False
-            PlayerScreen.Money12.Visible = False
-            PlayerScreen.Money11.Visible = False
-            PlayerScreen.Money10.Visible = False
-            PlayerScreen.Money09.Visible = False
-
-            'final question color
-            Money08.BackColor = Color.Gold
-            PlayerScreen.Money08.BackColor = Color.Gold
-            Money08.ForeColor = Color.White
-            PlayerScreen.Money08.ForeColor = Color.White
-
-            'Green the correct answers
-            Money01.BackColor = Color.Green
-            Money01.ForeColor = Color.White
-            Money02.BackColor = Color.Green
-            Money02.ForeColor = Color.White
-            Money03.BackColor = Color.Green
-            Money03.ForeColor = Color.White
-            PlayerScreen.Money01.BackColor = Color.Green
-            PlayerScreen.Money01.ForeColor = Color.White
-            PlayerScreen.Money02.BackColor = Color.Green
-            PlayerScreen.Money02.ForeColor = Color.White
-            PlayerScreen.Money03.BackColor = Color.Green
-            PlayerScreen.Money03.ForeColor = Color.White
-        ElseIf GPlayersRemaining = 1 Then
-            'hide the Million, ¥250,000, ¥100,000, ¥50,000, and ¥20,000
-            Money12.Visible = False
-            Money11.Visible = False
-            Money10.Visible = False
-            Money09.Visible = False
-            Money08.Visible = False
-            PlayerScreen.Money12.Visible = False
-            PlayerScreen.Money11.Visible = False
-            PlayerScreen.Money10.Visible = False
-            PlayerScreen.Money09.Visible = False
-            PlayerScreen.Money08.Visible = False
-
-            'final question color
-            Money07.BackColor = Color.Gold
-            PlayerScreen.Money07.BackColor = Color.Gold
-            Money07.ForeColor = Color.White
-            PlayerScreen.Money07.ForeColor = Color.White
-
-            'Green the correct answers
-            Money01.BackColor = Color.Green
-            Money01.ForeColor = Color.White
-            Money02.BackColor = Color.Green
-            Money02.ForeColor = Color.White
-            PlayerScreen.Money01.BackColor = Color.Green
-            PlayerScreen.Money01.ForeColor = Color.White
-            PlayerScreen.Money02.BackColor = Color.Green
-            PlayerScreen.Money02.ForeColor = Color.White
         End If
     End Sub
 
@@ -330,6 +409,9 @@
         Topic10.Visible = True
         Topic11.Visible = True
         Topic12.Visible = True
+        Topic13.Visible = True
+        Topic14.Visible = True
+        Topic15.Visible = True
     End Sub
 
     Sub HideValue()
@@ -346,6 +428,9 @@
         Money10.Visible = False
         Money11.Visible = False
         Money12.Visible = False
+        Money13.Visible = False
+        Money14.Visible = False
+        Money15.Visible = False
     End Sub
 
     Sub HideTopics()
@@ -362,6 +447,9 @@
         Topic10.Visible = False
         Topic11.Visible = False
         Topic12.Visible = False
+        Topic13.Visible = False
+        Topic14.Visible = False
+        Topic15.Visible = False
     End Sub
 
     Private Sub Transition_Click(sender As Object, e As EventArgs) Handles Transition.Click
@@ -388,11 +476,11 @@
     End Sub
 
     Private Sub ResumeGame_Click(sender As Object, e As EventArgs) Handles ResumeGame.Click
-        'play the question 8 Intro Music
+        'play the question 11 Intro Music
         My.Computer.Audio.Play(My.Resources.LevelTransitionMusic, AudioPlayMode.Background)
 
-        'open the Question 8 Window
-        Q08.Show()
+        'open the Question 11 Window
+        Q11.Show()
 
         'start the game on the player side
         PlayerScreen.StartandResumeGame()

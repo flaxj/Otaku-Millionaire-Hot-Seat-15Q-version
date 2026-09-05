@@ -11,39 +11,39 @@
     Private Sub AskResult_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If questionsRemaining = 5 Then
             'set values from question
-            AskA = Q08.AskA
-            AskB = Q08.AskB
-            AskC = Q08.AskC
-            AskD = Q08.AskD
-            asksum = Q08.AskSum
-        ElseIf questionsRemaining = 4 Then
-            'set values from question
-            AskA = Q09.AskA
-            AskB = Q09.AskB
-            AskC = Q09.AskC
-            AskD = Q09.AskD
-            asksum = Q09.AskSum
-        ElseIf questionsRemaining = 3 Then
-            'set values from question
-            AskA = Q10.AskA
-            AskB = Q10.AskB
-            AskC = Q10.AskC
-            AskD = Q10.AskD
-            asksum = Q10.AskSum
-        ElseIf questionsRemaining = 2 Then
-            'set values from question
             AskA = Q11.AskA
             AskB = Q11.AskB
             AskC = Q11.AskC
             AskD = Q11.AskD
             asksum = Q11.AskSum
-        Else
+        ElseIf questionsRemaining = 4 Then
             'set values from question
             AskA = Q12.AskA
             AskB = Q12.AskB
             AskC = Q12.AskC
             AskD = Q12.AskD
             asksum = Q12.AskSum
+        ElseIf questionsRemaining = 3 Then
+            'set values from question
+            AskA = Q13.AskA
+            AskB = Q13.AskB
+            AskC = Q13.AskC
+            AskD = Q13.AskD
+            asksum = Q13.AskSum
+        ElseIf questionsRemaining = 2 Then
+            'set values from question
+            AskA = Q14.AskA
+            AskB = Q14.AskB
+            AskC = Q14.AskC
+            AskD = Q14.AskD
+            asksum = Q14.AskSum
+        Else
+            'set values from question
+            AskA = Q15.AskA
+            AskB = Q15.AskB
+            AskC = Q15.AskC
+            AskD = Q15.AskD
+            asksum = Q15.AskSum
         End If
 
         'Find the percentage
@@ -100,34 +100,34 @@
 
         If questionsRemaining = 5 Then
             'transfer ask number
-            Q08.ask = ask
-
-            'resume game
-            Q08.asklifeline()
-        ElseIf questionsRemaining = 4 Then
-            'transfer ask number
-            Q09.ask = ask
-
-            'resume game
-            Q09.asklifeline()
-        ElseIf questionsRemaining = 3 Then
-            'transfer ask number
-            Q10.ask = ask
-
-            'resume game
-            Q10.asklifeline()
-        ElseIf questionsRemaining = 2 Then
-            'transfer ask number
             Q11.ask = ask
 
             'resume game
             Q11.asklifeline()
-        Else
+        ElseIf questionsRemaining = 4 Then
             'transfer ask number
             Q12.ask = ask
 
             'resume game
             Q12.asklifeline()
+        ElseIf questionsRemaining = 3 Then
+            'transfer ask number
+            Q13.ask = ask
+
+            'resume game
+            Q13.asklifeline()
+        ElseIf questionsRemaining = 2 Then
+            'transfer ask number
+            Q14.ask = ask
+
+            'resume game
+            Q14.asklifeline()
+        Else
+            'transfer ask number
+            Q15.ask = ask
+
+            'resume game
+            Q15.asklifeline()
         End If
     End Sub
 End Class

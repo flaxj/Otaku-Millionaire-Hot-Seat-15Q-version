@@ -186,9 +186,11 @@
         'read Question 12 file name
         Q12.Q12GamePlay = IO.File.ReadAllLines(Question12.FileName)
 
-        'show opening theme screen and Player Screen
-        OpeningScreen.Show()
-        PlayerScreen.Show()
+        Question13.Title = "Question 13 File"
+        Question13.Filter = "Text Files|*.txt"
+
+        'show the Question 13 File Box
+        Question13.ShowDialog()
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -199,5 +201,45 @@
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         'exit the program
         Application.Exit()
+    End Sub
+
+    Private Sub Question13_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles Question13.FileOk
+        'open the Question 13 file
+        Question13.OpenFile()
+
+        'read Question 13 file name
+        Q13.Q13GamePlay = IO.File.ReadAllLines(Question13.FileName)
+
+        Question14.Title = "Question 14 File"
+        Question14.Filter = "Text Files|*.txt"
+
+        'show the Question 14 File Box
+        Question14.ShowDialog()
+    End Sub
+
+    Private Sub Question14_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles Question14.FileOk
+        'open the Question 14 file
+        Question14.OpenFile()
+
+        'read Question 14 file name
+        Q14.Q14GamePlay = IO.File.ReadAllLines(Question14.FileName)
+
+        Question15.Title = "Question 15 File"
+        Question15.Filter = "Text Files|*.txt"
+
+        'show the Question 15 File Box
+        Question15.ShowDialog()
+    End Sub
+
+    Private Sub Question15_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles Question15.FileOk
+        'open the Question 15 file
+        Question15.OpenFile()
+
+        'read Question 15 file name
+        Q15.Q15GamePlay = IO.File.ReadAllLines(Question15.FileName)
+
+        'show opening theme screen and Player Screen
+        OpeningScreen.Show()
+        PlayerScreen.Show()
     End Sub
 End Class

@@ -1,6 +1,6 @@
 ﻿Public Class PlayerScreen
     Friend Players As Integer = 6 'declare the Players Varible
-    Friend subjects(12) As String 'declare the string array
+    Friend subjects(15) As String 'declare the string array
     Friend question(7) As String 'declare question string array
 
     Private Sub PlayerScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -22,6 +22,9 @@
         Topic10.Text = subjects(9)
         Topic11.Text = subjects(10)
         Topic12.Text = subjects(11)
+        Topic13.Text = subjects(12)
+        Topic14.Text = subjects(13)
+        Topic15.Text = subjects(14)
     End Sub
 
     Sub Values()
@@ -38,6 +41,9 @@
         Money10.Visible = True
         Money11.Visible = True
         Money12.Visible = True
+        Money13.Visible = True
+        Money14.Visible = True
+        Money15.Visible = True
     End Sub
 
     Sub ResetMoneyTree()
@@ -66,6 +72,12 @@
         Money11.ForeColor = DefaultForeColor
         Money12.BackColor = DefaultBackColor
         Money12.ForeColor = DefaultForeColor
+        Money13.BackColor = DefaultBackColor
+        Money13.ForeColor = DefaultForeColor
+        Money14.BackColor = DefaultBackColor
+        Money14.ForeColor = DefaultForeColor
+        Money15.BackColor = DefaultBackColor
+        Money15.ForeColor = DefaultForeColor
     End Sub
 
     Sub ShowTopics()
@@ -85,6 +97,9 @@
         Topic10.Visible = True
         Topic11.Visible = True
         Topic12.Visible = True
+        Topic13.Visible = True
+        Topic14.Visible = True
+        Topic15.Visible = True
     End Sub
 
     Sub HideValue()
@@ -101,6 +116,9 @@
         Money10.Visible = False
         Money11.Visible = False
         Money12.Visible = False
+        Money13.Visible = False
+        Money14.Visible = False
+        Money15.Visible = False
     End Sub
 
     Sub HideTopics()
@@ -117,13 +135,13 @@
         Topic10.Visible = False
         Topic11.Visible = False
         Topic12.Visible = False
+        Topic13.Visible = False
+        Topic14.Visible = False
+        Topic15.Visible = False
     End Sub
 
     Sub LevelTwoLifelines()
         'change the background of the final ten questions
-        Money03.BackColor = Color.Yellow
-        Money04.BackColor = Color.Yellow
-        Money05.BackColor = Color.Yellow
         Money06.BackColor = Color.Yellow
         Money07.BackColor = Color.Yellow
         Money08.BackColor = Color.Yellow
@@ -131,23 +149,32 @@
         Money10.BackColor = Color.Yellow
         Money11.BackColor = Color.Yellow
         Money12.BackColor = Color.Yellow
+        Money13.BackColor = Color.Yellow
+        Money14.BackColor = Color.Yellow
+        Money15.BackColor = Color.Yellow
     End Sub
 
-    Sub FirstTwoCorrect()
+    Sub FirstFiveCorrect()
         'show the first five correct answers in green
         Money01.BackColor = Color.Green
         Money01.ForeColor = Color.White
         Money02.BackColor = Color.Green
         Money02.ForeColor = Color.White
+        Money03.BackColor = Color.Green
+        Money03.ForeColor = Color.White
+        Money04.BackColor = Color.Green
+        Money04.ForeColor = Color.White
+        Money05.BackColor = Color.Green
+        Money05.ForeColor = Color.White
     End Sub
 
     Sub LevelThreeLifelines()
         'change the background of the final five questions
-        Money08.BackColor = Color.Orange
-        Money09.BackColor = Color.Orange
-        Money10.BackColor = Color.Orange
         Money11.BackColor = Color.Orange
         Money12.BackColor = Color.Orange
+        Money13.BackColor = Color.Orange
+        Money14.BackColor = Color.Orange
+        Money15.BackColor = Color.Orange
     End Sub
 
     Sub StartandResumeGame()

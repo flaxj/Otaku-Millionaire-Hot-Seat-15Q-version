@@ -3,11 +3,11 @@
     Friend question As Integer
 
     Private Sub Winnings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If question = 12 Then
-            If Q12.TopPrizeAmount.BackColor = Color.Green Then
-                winnings = Q12.TopPrizeAmount.Text
+        If question = 15 Then
+            If Q15.TopPrizeAmount.BackColor = Color.Green Then
+                winnings = Q15.TopPrizeAmount.Text
             Else
-                winnings = Q12.WonSoFar.Text
+                winnings = Q15.WonSoFar.Text
             End If
 
             'set Winnings Value at value amount
@@ -84,10 +84,10 @@
                     PlayerScreen.EndOfGame()
             End Select
 
-            'close Question 12
-            Q12.Close()
+            'close Question 15
+            Q15.Close()
         Else
-            If question > 7 And question < 12 Then
+            If question > 10 And question < 15 Then
                 AmountWon.Text = "¥1,000"
                 PlayerScreen.AmountWon.Text = "¥1,000"
 
@@ -98,10 +98,10 @@
                 'reset questions
                 PlayerScreen.EndOfGame()
 
+                Q14.Close()
+                Q13.Close()
+                Q12.Close()
                 Q11.Close()
-                Q10.Close()
-                Q09.Close()
-                Q08.Close()
             Else
                 'show the final picture and winnings on player screen
                 PlayerScreen.EndShowLogo.Visible = True
@@ -110,6 +110,9 @@
                 'reset questions
                 PlayerScreen.EndOfGame()
 
+                Q10.Close()
+                Q09.Close()
+                Q08.Close()
                 Q07.Close()
                 Q06.Close()
             End If

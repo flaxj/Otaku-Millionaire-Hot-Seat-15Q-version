@@ -1,5 +1,5 @@
 ﻿Public Class Level1MoneyTree
-    Friend subjects(12) As String 'declare the string array
+    Friend subjects(15) As String 'declare the string array
     Friend questionsAsked As Integer = 0 'declare the questionsAsked as Integer
     Dim count As Integer 'set count as Integer
     Dim time As Integer 'set time as integer
@@ -23,6 +23,9 @@
         Topic10.Text = subjects(9)
         Topic11.Text = subjects(10)
         Topic12.Text = subjects(11)
+        Topic13.Text = subjects(12)
+        Topic14.Text = subjects(13)
+        Topic15.Text = subjects(14)
     End Sub
 
     Private Sub ShowMoneyTree_Click(sender As Object, e As EventArgs) Handles ShowMoneyTree.Click
@@ -32,26 +35,23 @@
                 'show money tree
                 Values()
                 PlayerScreen.Values()
-            Case 1
-                'play music
-                My.Computer.Audio.Play(My.Resources.Rules_Explanation, AudioPlayMode.Background)
 
                 'change show money tree box text to start money tree
                 ShowMoneyTree.Text = "Start Money Tree"
-            Case 2
+            Case 1
                 'big color tree change
                 BigColorTreeClock()
 
                 'disable ShowMoneyTree
                 ShowMoneyTree.Enabled = False
-            Case 3
+            Case 2
                 'show topics
                 ShowTopics()
                 PlayerScreen.ShowTopics()
 
                 'change show money tree box text to hide topics
                 ShowMoneyTree.Text = "Hide Topics"
-            Case 4
+            Case 3
                 'hide topics
                 HideTopics()
                 PlayerScreen.HideTopics()
@@ -85,6 +85,9 @@
         Money10.Visible = True
         Money11.Visible = True
         Money12.Visible = True
+        Money13.Visible = True
+        Money14.Visible = True
+        Money15.Visible = True
     End Sub
 
     Public Sub BigColorTreeClock()
@@ -181,18 +184,36 @@
             Money12.ForeColor = Color.White
             PlayerScreen.Money12.BackColor = Color.Green
             PlayerScreen.Money12.ForeColor = Color.White
-        ElseIf time = 13 Or time = 15 Or time = 17 Or time = 19 Or time = 21 Or time = 23 Or time = 25 Or time = 27 Or time = 29 Then
+        ElseIf time = 13 Then
+            'change the first money value
+            Money13.BackColor = Color.Green
+            Money13.ForeColor = Color.White
+            PlayerScreen.Money13.BackColor = Color.Green
+            PlayerScreen.Money13.ForeColor = Color.White
+        ElseIf time = 14 Then
+            'change the second money value
+            Money14.BackColor = Color.Green
+            Money14.ForeColor = Color.White
+            PlayerScreen.Money14.BackColor = Color.Green
+            PlayerScreen.Money14.ForeColor = Color.White
+        ElseIf time = 15 Then
+            'change the jackpot money value to green
+            Money15.BackColor = Color.Green
+            Money15.ForeColor = Color.White
+            PlayerScreen.Money15.BackColor = Color.Green
+            PlayerScreen.Money15.ForeColor = Color.White
+        ElseIf time = 16 Or time = 18 Or time = 20 Or time = 22 Or time = 24 Or time = 26 Or time = 28 Or time = 30 Then
             'change the jackpot money value to orange
-            Money12.BackColor = Color.Orange
-            Money12.ForeColor = Color.Black
-            PlayerScreen.Money12.BackColor = Color.Orange
-            PlayerScreen.Money12.ForeColor = Color.Black
+            Money15.BackColor = Color.Orange
+            Money15.ForeColor = Color.Black
+            PlayerScreen.Money15.BackColor = Color.Orange
+            PlayerScreen.Money15.ForeColor = Color.Black
         Else
             'change the jackpot money value to green
-            Money12.BackColor = Color.Green
-            Money12.ForeColor = Color.White
-            PlayerScreen.Money12.BackColor = Color.Green
-            PlayerScreen.Money12.ForeColor = Color.White
+            Money15.BackColor = Color.Green
+            Money15.ForeColor = Color.White
+            PlayerScreen.Money15.BackColor = Color.Green
+            PlayerScreen.Money15.ForeColor = Color.White
         End If
     End Sub
 
@@ -222,6 +243,12 @@
         Money11.ForeColor = DefaultForeColor
         Money12.BackColor = DefaultBackColor
         Money12.ForeColor = DefaultForeColor
+        Money13.BackColor = DefaultBackColor
+        Money13.ForeColor = DefaultForeColor
+        Money14.BackColor = DefaultBackColor
+        Money14.ForeColor = DefaultForeColor
+        Money15.BackColor = DefaultBackColor
+        Money15.ForeColor = DefaultForeColor
 
         If time = 31 Then
             'stop the clock
@@ -252,6 +279,9 @@
         Topic10.Visible = True
         Topic11.Visible = True
         Topic12.Visible = True
+        Topic13.Visible = True
+        Topic14.Visible = True
+        Topic15.Visible = True
     End Sub
 
     Sub HideValue()
@@ -268,6 +298,9 @@
         Money10.Visible = False
         Money11.Visible = False
         Money12.Visible = False
+        Money13.Visible = False
+        Money14.Visible = False
+        Money15.Visible = False
     End Sub
 
     Sub HideTopics()
@@ -284,36 +317,39 @@
         Topic10.Visible = False
         Topic11.Visible = False
         Topic12.Visible = False
+        Topic13.Visible = False
+        Topic14.Visible = False
+        Topic15.Visible = False
     End Sub
 
     Private Sub Transition_Click(sender As Object, e As EventArgs) Handles Transition.Click
         'show the count file
         Select Case count
-            Case 5
+            Case 4
                 'show the pass lifeline
                 PassPic.Visible = True
                 PlayerScreen.PassPic.Visible = True
-            Case 6
+            Case 5
                 'level Two lifelines
                 LevelTwoLifelines()
                 PlayerScreen.LevelTwoLifelines()
-            Case 7
+            Case 6
                 'show the Ask a Friend Lifeline
                 AskFriendPic.Visible = True
                 PlayerScreen.AskFriendPic.Visible = True
-            Case 8
+            Case 7
                 'show the Trust the Computer lifeline
                 TrustPic.Visible = True
                 PlayerScreen.TrustPic.Visible = True
-            Case 9
+            Case 8
                 'show the double dip lifeline
                 DoubleDipPic.Visible = True
                 PlayerScreen.DoubleDipPic.Visible = True
-            Case 10
+            Case 9
                 'final five questions color
                 LevelThreeLifelines()
                 PlayerScreen.LevelThreeLifelines()
-            Case 11
+            Case 10
                 'hide Pass
                 PassPic.Visible = False
                 PlayerScreen.PassPic.Visible = False
@@ -321,11 +357,11 @@
                 'show the ask the audience lifeline
                 AskPic.Visible = True
                 PlayerScreen.AskPic.Visible = True
-            Case 12
+            Case 11
                 'level 4 question color
-                Money12.BackColor = Color.Gold
-                PlayerScreen.Money12.BackColor = Color.Gold
-            Case 13
+                Money15.BackColor = Color.Gold
+                PlayerScreen.Money15.BackColor = Color.Gold
+            Case 12
                 'hide all other Lifelines
                 AskFriendPic.Visible = False
                 AskPic.Visible = False
@@ -334,10 +370,10 @@
                 PlayerScreen.AskFriendPic.Visible = False
                 PlayerScreen.AskPic.Visible = False
                 PlayerScreen.TrustPic.Visible = False
-            Case 15
+            Case 13
                 'show the first detail label
                 MainDetail1.Visible = True
-            Case 16
+            Case 14
                 'perform reset money tree
                 ResetMoneyTree()
                 PlayerScreen.ResetMoneyTree()
@@ -363,9 +399,6 @@
 
     Sub LevelTwoLifelines()
         'change the background of the final ten questions
-        Money03.BackColor = Color.Yellow
-        Money04.BackColor = Color.Yellow
-        Money05.BackColor = Color.Yellow
         Money06.BackColor = Color.Yellow
         Money07.BackColor = Color.Yellow
         Money08.BackColor = Color.Yellow
@@ -373,23 +406,32 @@
         Money10.BackColor = Color.Yellow
         Money11.BackColor = Color.Yellow
         Money12.BackColor = Color.Yellow
+        Money13.BackColor = Color.Yellow
+        Money14.BackColor = Color.Yellow
+        Money15.BackColor = Color.Yellow
     End Sub
 
-    Sub FirstTwoCorrect()
+    Sub FirstFiveCorrect()
         'show the first five correct answers in green
         Money01.BackColor = Color.Green
         Money01.ForeColor = Color.White
         Money02.BackColor = Color.Green
         Money02.ForeColor = Color.White
+        Money03.BackColor = Color.Green
+        Money03.ForeColor = Color.White
+        Money04.BackColor = Color.Green
+        Money04.ForeColor = Color.White
+        Money05.BackColor = Color.Green
+        Money05.ForeColor = Color.White
     End Sub
 
     Sub LevelThreeLifelines()
         'change the background of the final five questions
-        Money08.BackColor = Color.Orange
-        Money09.BackColor = Color.Orange
-        Money10.BackColor = Color.Orange
         Money11.BackColor = Color.Orange
         Money12.BackColor = Color.Orange
+        Money13.BackColor = Color.Orange
+        Money14.BackColor = Color.Orange
+        Money15.BackColor = Color.Orange
     End Sub
 
     Private Sub StartGame_Click(sender As Object, e As EventArgs) Handles StartGame.Click

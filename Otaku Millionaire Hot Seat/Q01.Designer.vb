@@ -148,7 +148,7 @@ Partial Class Q01
         Me.QuestionValue.Name = "QuestionValue"
         Me.QuestionValue.Size = New System.Drawing.Size(108, 46)
         Me.QuestionValue.TabIndex = 8
-        Me.QuestionValue.Text = "¥500"
+        Me.QuestionValue.Text = "¥100"
         '
         'TopPrizeAmount
         '
@@ -179,7 +179,7 @@ Partial Class Q01
         Me.SafeHavenQuestionsRemaining.Name = "SafeHavenQuestionsRemaining"
         Me.SafeHavenQuestionsRemaining.Size = New System.Drawing.Size(42, 46)
         Me.SafeHavenQuestionsRemaining.TabIndex = 11
-        Me.SafeHavenQuestionsRemaining.Text = "2"
+        Me.SafeHavenQuestionsRemaining.Text = "5"
         '
         'AmountAtRisk
         '

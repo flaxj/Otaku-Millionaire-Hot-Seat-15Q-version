@@ -32,13 +32,13 @@
 
         If GPlayersRemaining = 6 Then
             'set QuestionValue to Question 2 Value
-            QuestionValue.Text = "¥1,000"
+            QuestionValue.Text = "¥200"
 
             'transfer value to PlayerScreen
             PlayerScreen.QuestionValue.Text = QuestionValue.Text
         Else
             'set QuestionValue to Question 1 Value
-            QuestionValue.Text = "¥500"
+            QuestionValue.Text = "¥100"
 
             'set new risk value to ¥150,000
             AmountAtRisk.Text = "¥150,000"
@@ -158,21 +158,13 @@
                     SHQuestionsRemaining -= 1
                     SafeHavenQuestionsRemaining.Text = CStr(SHQuestionsRemaining)
 
-                    If SHQuestionsRemaining = 0 Then
-                        'hide the SafeHavenQuestionsRemaining Lable
-                        SafeHavenQuestionsRemaining.Visible = False
+                    'play level1 correct music
+                    My.Computer.Audio.Play(My.Resources.Level1Correct, AudioPlayMode.Background)
 
-                        'play the ¥1,000 Music
-                        My.Computer.Audio.Play(My.Resources.OneThousandYenWon, AudioPlayMode.Background)
-                    Else
-                        'play level1 correct music
-                        My.Computer.Audio.Play(My.Resources.Level1Correct, AudioPlayMode.Background)
-
-                        If passUsage < GPlayersRemaining Then
-                            'show the pass Lifeline Picture
-                            PassPic.Visible = True
-                            PlayerScreen.PassPic.Visible = True
-                        End If
+                    If passUsage < GPlayersRemaining Then
+                        'show the pass Lifeline Picture
+                        PassPic.Visible = True
+                        PlayerScreen.PassPic.Visible = True
                     End If
                 Else
                     'take one from GPlayersRemaining

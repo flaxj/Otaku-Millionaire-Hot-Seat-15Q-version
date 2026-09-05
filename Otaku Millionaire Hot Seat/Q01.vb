@@ -3,7 +3,7 @@
     Friend GPlayersRemaining As Integer = 6 'declare GPlayersRemaining as Integer
     Friend GPlayerNumber As Integer = 1 'declare GPlayerNumber as Integer
     Friend questionsRemaining As Integer = 12 'declare questionsRemaining as Integer
-    Friend SHQuestionsRemaining As Integer = 2 'declare safeHavenQuestionsRemaining as Integer
+    Friend SHQuestionsRemaining As Integer = 5 'declare safeHavenQuestionsRemaining as Integer
     Friend passUsage As Integer 'declare passUsage as Integer
     Friend TimeSeconds As Integer = 15 'declare TimeSeconds as Integer
     Friend TimeTenths As Integer = 0 'declare TimeTenths as Integer
@@ -47,15 +47,15 @@
         ChoiceD.Text = Q1GamePlay(7)
         PlayerScreen.Topic.Text = Q1GamePlay(0)
         PlayerScreen.question(0) = Q1GamePlay(1)
-            PlayerScreen.question(1) = Q1GamePlay(2)
-            PlayerScreen.question(2) = Q1GamePlay(3)
-            PlayerScreen.question(3) = Q1GamePlay(4)
-            PlayerScreen.question(4) = Q1GamePlay(5)
-            PlayerScreen.question(5) = Q1GamePlay(6)
-            PlayerScreen.question(6) = Q1GamePlay(7)
+        PlayerScreen.question(1) = Q1GamePlay(2)
+        PlayerScreen.question(2) = Q1GamePlay(3)
+        PlayerScreen.question(3) = Q1GamePlay(4)
+        PlayerScreen.question(4) = Q1GamePlay(5)
+        PlayerScreen.question(5) = Q1GamePlay(6)
+        PlayerScreen.question(6) = Q1GamePlay(7)
 
-            'load the question on the PlayerScreen
-            PlayerScreen.QuestionLoader()
+        'load the question on the PlayerScreen
+        PlayerScreen.QuestionLoader()
 
         'set the answer
         answer = Q1GamePlay(8)

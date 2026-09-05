@@ -42,6 +42,9 @@ Partial Class Welcome
         Me.Question02 = New System.Windows.Forms.OpenFileDialog()
         Me.Question01 = New System.Windows.Forms.OpenFileDialog()
         Me.TopicFile = New System.Windows.Forms.OpenFileDialog()
+        Me.Question13 = New System.Windows.Forms.OpenFileDialog()
+        Me.Question14 = New System.Windows.Forms.OpenFileDialog()
+        Me.Question15 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.ShowLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -166,6 +169,21 @@ Partial Class Welcome
         Me.TopicFile.FileName = "Topic File"
         Me.TopicFile.Title = "Topic"
         '
+        'Question13
+        '
+        Me.Question13.FileName = "Question 13"
+        Me.Question13.Title = "Question 12"
+        '
+        'Question14
+        '
+        Me.Question14.FileName = "Question 14"
+        Me.Question14.Title = "Question 12"
+        '
+        'Question15
+        '
+        Me.Question15.FileName = "Question 15"
+        Me.Question15.Title = "Question 12"
+        '
         'Welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -208,4 +226,7 @@ Partial Class Welcome
     Friend WithEvents Question02 As OpenFileDialog
     Friend WithEvents Question01 As OpenFileDialog
     Friend WithEvents TopicFile As OpenFileDialog
+    Friend WithEvents Question13 As OpenFileDialog
+    Friend WithEvents Question14 As OpenFileDialog
+    Friend WithEvents Question15 As OpenFileDialog
 End Class

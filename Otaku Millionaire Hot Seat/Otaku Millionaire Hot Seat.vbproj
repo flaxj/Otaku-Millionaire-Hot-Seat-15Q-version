@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -231,7 +231,6 @@
     </Compile>
     <Compile Include="Welcome.Designer.vb">
       <DependentUpon>Welcome.vb</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -315,6 +314,15 @@
     <EmbeddedResource Include="Q12.resx">
       <DependentUpon>Q12.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Q13.resx">
+      <DependentUpon>Q13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Q14.resx">
+      <DependentUpon>Q14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Q15.resx">
+      <DependentUpon>Q15.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.vb</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +348,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

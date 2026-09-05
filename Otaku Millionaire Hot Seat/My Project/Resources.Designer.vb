@@ -122,7 +122,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Battle_Royle_Intro() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Battle_Royle_Intro", resourceCulture)
+                Return ResourceManager.GetStream("Battle Royle Intro", resourceCulture)
             End Get
         End Property
         
@@ -148,15 +148,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property DoubleDipandFinalIntro() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("DoubleDipandFinalIntro", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        '''</summary>
         Friend ReadOnly Property DoubleDipFinalAnswer() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("DoubleDipFinalAnswer", resourceCulture)
@@ -175,15 +166,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property DoubleDipRules() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("DoubleDipRules", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        '''</summary>
         Friend ReadOnly Property DoubleDipSecondChance() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("DoubleDipSecondChance", resourceCulture)
@@ -195,25 +177,34 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property End_of_Game() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("End_of_Game", resourceCulture)
+                Return ResourceManager.GetStream("End of Game", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property FiftyFiftySound() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property FinalAndSecondChanceIntro() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("FiftyFiftySound", resourceCulture)
+                Return ResourceManager.GetStream("FinalAndSecondChanceIntro", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property JackpotQuestionMusic() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property FirstAdBreakEnd() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("JackpotQuestionMusic", resourceCulture)
+                Return ResourceManager.GetStream("FirstAdBreakEnd", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property FirstandThirdAdBreaksStart() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("FirstandThirdAdBreaksStart", resourceCulture)
             End Get
         End Property
         
@@ -276,7 +267,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Next_Player_In() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Next_Player_In", resourceCulture)
+                Return ResourceManager.GetStream("Next Player In", resourceCulture)
             End Get
         End Property
         
@@ -332,16 +323,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Question10_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question10_15", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        '''</summary>
-        Friend ReadOnly Property Question10_30() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("Question10_30", resourceCulture)
+                Return ResourceManager.GetStream("Question10.15", resourceCulture)
             End Get
         End Property
         
@@ -375,6 +357,33 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property Question11() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Question11", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Question11_15() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Question11.15", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Question11_30() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Question11.30", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property Question11Correct() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Question11Correct", resourceCulture)
@@ -384,171 +393,171 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question12MillionYenFinalAnswer() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question11Final() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question12MillionYenFinalAnswer", resourceCulture)
+                Return ResourceManager.GetStream("Question11Final", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question12MillionYenQuestion() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question11Wrong() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question12MillionYenQuestion", resourceCulture)
+                Return ResourceManager.GetStream("Question11Wrong", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question12MillionYenQuestion_15() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question12() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question12MillionYenQuestion_15", resourceCulture)
+                Return ResourceManager.GetStream("Question12", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question12MillionYenQuestion_30() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question12_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question12MillionYenQuestion_30", resourceCulture)
+                Return ResourceManager.GetStream("Question12.15", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question3() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question12_30() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question3", resourceCulture)
+                Return ResourceManager.GetStream("Question12.30", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question3_15() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question12Correct() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question3_15", resourceCulture)
+                Return ResourceManager.GetStream("Question12Correct", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question3Correct() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question12Final() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question3Correct", resourceCulture)
+                Return ResourceManager.GetStream("Question12Final", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question3Final() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question12Wrong() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question3Final", resourceCulture)
+                Return ResourceManager.GetStream("Question12Wrong", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question3Wrong() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question13() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question3Wrong", resourceCulture)
+                Return ResourceManager.GetStream("Question13", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question4() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question13_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question4", resourceCulture)
+                Return ResourceManager.GetStream("Question13.15", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question4_15() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question13_30() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question4_15", resourceCulture)
+                Return ResourceManager.GetStream("Question13.30", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question4Correct() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question13Correct() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question4Correct", resourceCulture)
+                Return ResourceManager.GetStream("Question13Correct", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question4Final() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question13Final() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question4Final", resourceCulture)
+                Return ResourceManager.GetStream("Question13Final", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question4Wrong() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question13Wrong() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question4Wrong", resourceCulture)
+                Return ResourceManager.GetStream("Question13Wrong", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question5() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question14Correct() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question5", resourceCulture)
+                Return ResourceManager.GetStream("Question14Correct", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question5_15() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question15MillionYenFinalAnswer() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question5_15", resourceCulture)
+                Return ResourceManager.GetStream("Question15MillionYenFinalAnswer", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question5Correct() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question15MillionYenQuestion() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question5Correct", resourceCulture)
+                Return ResourceManager.GetStream("Question15MillionYenQuestion", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question5Final() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question15MillionYenQuestion_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question5Final", resourceCulture)
+                Return ResourceManager.GetStream("Question15MillionYenQuestion.15", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Question5Wrong() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Question15MillionYenQuestion_30() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question5Wrong", resourceCulture)
+                Return ResourceManager.GetStream("Question15MillionYenQuestion.30", resourceCulture)
             End Get
         End Property
         
@@ -566,7 +575,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Question6_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question6_15", resourceCulture)
+                Return ResourceManager.GetStream("Question6.15", resourceCulture)
             End Get
         End Property
         
@@ -611,7 +620,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Question7_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question7_15", resourceCulture)
+                Return ResourceManager.GetStream("Question7.15", resourceCulture)
             End Get
         End Property
         
@@ -656,16 +665,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Question8_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question8_15", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        '''</summary>
-        Friend ReadOnly Property Question8_30() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("Question8_30", resourceCulture)
+                Return ResourceManager.GetStream("Question8.15", resourceCulture)
             End Get
         End Property
         
@@ -710,16 +710,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Question9_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Question9_15", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        '''</summary>
-        Friend ReadOnly Property Question9_30() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("Question9_30", resourceCulture)
+                Return ResourceManager.GetStream("Question9.15", resourceCulture)
             End Get
         End Property
         
@@ -753,45 +744,45 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Questions11and12() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Questions14and15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Questions11and12", resourceCulture)
+                Return ResourceManager.GetStream("Questions14and15", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Questions11and12_15() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Questions14and15_15() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Questions11and12_15", resourceCulture)
+                Return ResourceManager.GetStream("Questions14and15.15", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Questions11and12_30() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Questions14and15_30() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Questions11and12_30", resourceCulture)
+                Return ResourceManager.GetStream("Questions14and15.30", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Questions11and12FinalAnswer() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Questions14and15FinalAnswer() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Questions11and12FinalAnswer", resourceCulture)
+                Return ResourceManager.GetStream("Questions14and15FinalAnswer", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Questions11and12Wrong() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property Questions14and15Wrong() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Questions11and12Wrong", resourceCulture)
+                Return ResourceManager.GetStream("Questions14and15Wrong", resourceCulture)
             End Get
         End Property
         
@@ -807,6 +798,15 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property Regular_Ending_Theme() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Regular Ending Theme", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property RegularWin() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("RegularWin", resourceCulture)
@@ -816,9 +816,27 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property Rules_Explanation() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property SecondAdBreakEnd() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Rules_Explanation", resourceCulture)
+                Return ResourceManager.GetStream("SecondAdBreakEnd", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property SecondAdBreaksStart() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("SecondAdBreaksStart", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property SecondChanceRules() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("SecondChanceRules", resourceCulture)
             End Get
         End Property
         
@@ -836,7 +854,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Three_Beeps() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("Three_Beeps", resourceCulture)
+                Return ResourceManager.GetStream("Three Beeps", resourceCulture)
             End Get
         End Property
         
